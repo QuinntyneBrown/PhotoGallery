@@ -50,10 +50,13 @@ app.config(["$routeProvider", "apiEndpointProvider", "initialStateProvider", "lo
 
     $routeProvider
         .when("/", { template: "<login></login>" })
+        .when("/author/list", { template: "<author-list></author-list>" })
         .when("/brand/list", { template: "<brand-list></brand-list>" })
+        .when("/description/list", { template: "<description-list></description-list>" })
         .when("/gallery/list", { template: "<gallery-list></gallery-list>" })
         .when("/photo/list", { template: "<photo-list></photo-list>" })
         .when("/photo/upload/:galleryId", { template: "<photo-upload></photo-upload>" })
+        .when("/sponsor/list", { template: "<sponsor-list></sponsor-list>" })
         .when("/tag/list", { template: "<tag-list></tag-list>" })
         .otherwise("/");
 

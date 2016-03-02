@@ -1,8 +1,8 @@
 ﻿import { addOrUpdate, pluckOut } from "../../libs";
-import { AddPhotoAction, AllPhotosAction, RemovePhotoAction } from "../actions";
+import { AddOrUpdatePhotoAction, AllPhotosAction, RemovePhotoAction } from "../actions";
 
 export const addPhotoReducer = (state, action) => {
-    if (action instanceof AddPhotoAction) {
+    if (action instanceof AddOrUpdatePhotoAction) {
         addOrUpdate({ items: state.photos, item: action.entity });
     }
     return state;

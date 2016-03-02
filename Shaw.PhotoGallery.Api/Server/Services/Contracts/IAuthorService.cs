@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chloe.Server.Services.Contracts
 {
-    interface IAuthorService
+    public interface IAuthorService
     {
     }
 }

@@ -1,19 +1,17 @@
-﻿<div class="authorList">
+﻿<div class="brandList">
 
-    <h1>Author List</h1>
-
-    <author-editor></author-editor>
+    <brand-editor></brand-editor>
 
     <div>
-        <div class="author-header">
+        <div class="brand-header">
             <h1>{{ ::vm.title }}</h1>
         </div>
 
-        <div data-ng-repeat="entity in vm.entities" class="authorList-item">
-            <div class="authorList-name">
+        <div data-ng-repeat="entity in vm.entities" class="brandList-item">
+            <div class="brandList-name">
                 {{ entity.name }}
             </div>
-            <div class="authorList-actions">
+            <div class="brandList-actions">
                 <span data-ng-click="vm.edit(entity)">edit</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span data-ng-click="vm.remove(entity)">remove</span>
             </div>
             <div style="clear:both;"></div>

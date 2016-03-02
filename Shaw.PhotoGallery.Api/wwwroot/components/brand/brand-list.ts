@@ -10,7 +10,7 @@
     "authorActionCreator", "invokeAsync",
     (authorActionCreator, invokeAsync) => invokeAsync(authorActionCreator.all)
 ])
-export class authorListComponent {
+export class BrandListComponent {
     constructor(private $location: angular.ILocationService, private authorActionCreator) { }
     storeOnChange = state => this.entities = state.authors;
     entities;

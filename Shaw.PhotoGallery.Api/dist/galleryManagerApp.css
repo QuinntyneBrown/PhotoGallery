@@ -1,27 +1,21 @@
-.photoUpload-dropZone {
-    background-color:azure;
-    height:500px;
-    width:500px;
+body {
+}
+
+.author-list {
+
+
 }
 .galleryEditor {
 
 }
 
 
-.appHeader {
-    height:50px;
+
+.photoUpload-dropZone {
+    background-color:azure;
+    height:500px;
+    width:500px;
 }
-
-.appHeader a {
-    padding:7.5px;
-    text-transform: uppercase;
-}
-
-.appHeader a.selected { font-weight:800; background-color:#F36C81; color:#EEE; }
-
-body {
-}
-
 .button {
     margin-top:15px;
     margin-bottom:30px;
@@ -52,3 +46,18 @@ body {
 }
 
 
+
+
+.appHeader {
+    height:50px;
+}
+
+.appHeader a {
+    padding:7.5px;
+    text-transform: uppercase;
+}
+
+.appHeader a.selected { font-weight:800; background-color:#F36C81; color:#EEE; }
+
+body {
+}

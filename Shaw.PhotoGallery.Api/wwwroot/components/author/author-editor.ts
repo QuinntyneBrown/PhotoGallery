@@ -14,14 +14,12 @@ import { AuthorActionCreator } from "../../actions";
         params: { id: id }
     });
 }])
-export class authorEditorComponent {
+export class AuthorEditorComponent {
     constructor(private $location, private authorActionCreator, private invokeAsync) { }
 
     storeOnChange = state => {
         this.id = null;
         this.name = null;
-        this.photos = [];
-        this.authorName = null;
     }
 
     addOrUpdate = () => {
@@ -29,8 +27,7 @@ export class authorEditorComponent {
             action: this.authorActionCreator.addOrUpdate,
             params: {
                 id: this.id,
-                name: this.name,
-                description: this.description
+                name: this.name
             }
         }).then(() => {
             if (!this.id && this.entities.filter(entity => entity.name === this.name).length > 0) {
@@ -46,9 +43,6 @@ export class authorEditorComponent {
 
     id;
     name;
-    photos: Array<any>;
-    authorName;
-    description;
     entities;
     baseUrl;
 }

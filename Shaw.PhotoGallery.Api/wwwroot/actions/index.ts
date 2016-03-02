@@ -5,3 +5,5 @@ export * from "./photo-actions";
 export * from "./user-actions";
 export * from "./tag-actions";
 export * from "./tab-actions";
+export * from "./description-actions";
+export * from "./sponsor-actions";

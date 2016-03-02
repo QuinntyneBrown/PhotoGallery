@@ -1,8 +1,8 @@
-﻿import { AddTagAction, AllTagsAction, RemoveTagAction } from "../actions";
+﻿import { AddOrUpdateTagAction, AllTagsAction, RemoveTagAction } from "../actions";
 import { addOrUpdate, pluckOut } from "../../libs";
 
 export const addTagReducer = (state, action) => {
-    if (action instanceof AddTagAction) {
+    if (action instanceof AddOrUpdateTagAction) {
         addOrUpdate({ items: state.photos, item: action.entity });
     }
     return state;

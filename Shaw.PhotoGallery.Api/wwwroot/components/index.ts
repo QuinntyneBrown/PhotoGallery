@@ -1,4 +1,6 @@
-﻿export * from "./general/home";
+﻿export * from "./author/author-list";
+
+export * from "./general/home";
 export * from "./general/app";
 export * from "./photo/photo-upload";
 export * from "./general/header";

@@ -1,11 +1,6 @@
 ﻿import { IDispatcher } from "../../libs/store";
 
-export interface ISponsorActionCreator {
-    get(): string;
-    addSponsor(options: any): string;
-}
-
-export class SponsorActionCreator implements ISponsorActionCreator {
+export class SponsorActionCreator {
     constructor(private sponsorService, private dispatcher: IDispatcher, private guid) { }
 
     get = () => {
@@ -20,6 +15,15 @@ export class SponsorActionCreator implements ISponsorActionCreator {
     addSponsor = options => {
         var newId = this.guid();
         this.sponsorService.add({ data: options.data }).then(results => {
+            var action = new AddOrUpdateSponsorAction(newId, results);
+            this.dispatcher.dispatch(action);
+        });
+        return newId;
+    }
+
+    getById = options => {
+        var newId = this.guid();
+        this.sponsorService.getById({ id: options.id }).then(results => {
             var action = new AddOrUpdateSponsorAction(newId, results);
             this.dispatcher.dispatch(action);
         });

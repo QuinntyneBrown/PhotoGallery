@@ -20,15 +20,24 @@ export class BrandActionCreator implements IBrandActionCreator {
     addBrand = options => {
         var newId = this.guid();
         this.brandService.add({ data: options.data }).then(results => {
-            var action = new AddBrandAction(newId, results);
+            var action = new AddOrUpdateBrandAction(newId, results);
             this.dispatcher.dispatch(action);
         });
         return newId;
     } 
 
+    getById = options => {
+        var newId = this.guid();
+        this.brandService.get().then(results => {
+            var action = new AddOrUpdateBrandAction(newId, results);
+            this.dispatcher.dispatch(action);
+        });
+        return newId;
+    }
+
 }
 
-export class AddBrandAction { constructor(public id, public entity) { } }
+export class AddOrUpdateBrandAction { constructor(public id, public entity) { } }
 
 export class AllBrandsAction { constructor(public id, public entities) { } }
 

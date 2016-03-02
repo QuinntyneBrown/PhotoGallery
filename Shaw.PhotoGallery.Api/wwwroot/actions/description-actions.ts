@@ -1,12 +1,16 @@
 ﻿import { IDispatcher } from "../../libs/store";
 
-export interface IDescriptionActionCreator {
-    get(): string;
-    addDescription(options: any): string;
-}
-
-export class DescriptionActionCreator implements IDescriptionActionCreator {
+export class DescriptionActionCreator {
     constructor(private descriptionService, private dispatcher: IDispatcher, private guid) { }
+
+    getById = options => {
+        var newId = this.guid();
+        this.descriptionService.get().then(results => {
+            var action = new AddOrUpdateDescriptionAction(newId, results);
+            this.dispatcher.dispatch(action);
+        });
+        return newId;
+    }
 
     get = () => {
         var newId = this.guid();

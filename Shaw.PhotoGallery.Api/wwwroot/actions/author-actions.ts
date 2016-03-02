@@ -1,14 +1,18 @@
 ﻿import { IDispatcher } from "../../libs/store";
 
-export interface IAuthorActionCreator {
-    get(): string;
-    addAuthor(options: any): string;
-}
-
-export class AuthorActionCreator implements IAuthorActionCreator {
+export class AuthorActionCreator {
     constructor(private authorService, private dispatcher: IDispatcher, private guid) { }
 
-    get = () => {
+    getById = options => {
+        var newId = this.guid();
+        this.authorService.get().then(results => {
+            var action = new AddOrUpdateAuthorAction(newId, results);
+            this.dispatcher.dispatch(action);
+        });
+        return newId;
+    }
+
+    all = () => {
         var newId = this.guid();
         this.authorService.get().then(results => {
             var action = new AllAuthorsAction(newId, results);
@@ -17,7 +21,7 @@ export class AuthorActionCreator implements IAuthorActionCreator {
         return newId;
     }
 
-    addAuthor = options => {
+    add = options => {
         var newId = this.guid();
         this.authorService.add({ data: options.data }).then(results => {
             var action = new AddOrUpdateAuthorAction(newId, results);
@@ -25,7 +29,6 @@ export class AuthorActionCreator implements IAuthorActionCreator {
         });
         return newId;
     }
-
 }
 
 export class AddOrUpdateAuthorAction { constructor(public id, public entity) { } }

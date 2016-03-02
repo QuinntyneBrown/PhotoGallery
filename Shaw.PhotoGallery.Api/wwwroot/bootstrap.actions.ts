@@ -1,9 +1,10 @@
-﻿import { BrandActionCreator, GalleryActionCreator, PhotoActionCreator, TagActionCreator, UserActionCreator } from "./actions";
+﻿import * as actions from "./actions";
 
 var app = (<any>angular.module("actions", ["services","store"]));
 
-app.service("brandActionCreator", ["brandService", "dispatcher", "guid", BrandActionCreator]);
-app.service("galleryActionCreator", ["dispatcher", "galleryService", "guid", GalleryActionCreator]);
-app.service("tagActionCreator", ["tagService", "dispatcher", "guid", TagActionCreator]);
-app.service("userActionCreator", ["dispatcher", "guid", "userService", UserActionCreator]);
-app.service("photoActionCreator", ["photoService", "dispatcher", "guid", PhotoActionCreator]);
+app.service("authorActionCreator", ["authorService", "dispatcher", "guid", actions.AuthorActionCreator]);
+app.service("brandActionCreator", ["brandService", "dispatcher", "guid", actions.BrandActionCreator]);
+app.service("galleryActionCreator", ["dispatcher", "galleryService", "guid", actions.GalleryActionCreator]);
+app.service("tagActionCreator", ["tagService", "dispatcher", "guid", actions.TagActionCreator]);
+app.service("userActionCreator", ["dispatcher", "guid", "userService", actions.UserActionCreator]);
+app.service("photoActionCreator", ["photoService", "dispatcher", "guid", actions.PhotoActionCreator]);

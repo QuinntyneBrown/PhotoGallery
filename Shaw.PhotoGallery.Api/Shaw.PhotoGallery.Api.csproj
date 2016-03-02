@@ -166,20 +166,78 @@
     <Content Include="node_modules\angular\angular.js" />
     <Content Include="node_modules\angular\angular.min.js" />
     <Content Include="packages.config" />
-    <Content Include="wwwroot\components\gallery\gallery-editor.css" />
-    <Content Include="wwwroot\components\gallery\gallery-editor.html" />
-    <Content Include="wwwroot\components\gallery\gallery-list.css" />
-    <Content Include="wwwroot\components\gallery\gallery-list.html" />
-    <Content Include="wwwroot\components\general\app.css" />
-    <Content Include="wwwroot\components\general\app.html" />
-    <Content Include="wwwroot\components\general\header.css" />
-    <Content Include="wwwroot\components\general\header.html" />
-    <Content Include="wwwroot\components\general\home.css" />
-    <Content Include="wwwroot\components\general\home.html" />
-    <Content Include="wwwroot\components\general\login.css" />
-    <Content Include="wwwroot\components\general\login.html" />
-    <Content Include="wwwroot\components\photo\photo-upload.css" />
-    <Content Include="wwwroot\components\photo\photo-upload.html" />
+    <Content Include="wwwroot\components\author\author-editor.css">
+      <DependentUpon>author-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\author\author-editor.html">
+      <DependentUpon>author-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\author\author-list.css">
+      <DependentUpon>author-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\author\author-list.html">
+      <DependentUpon>author-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\brand\brand-editor.html">
+      <DependentUpon>brand-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\brand\brand-list.html">
+      <DependentUpon>brand-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\gallery\gallery-editor.css">
+      <DependentUpon>gallery-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\gallery\gallery-editor.html">
+      <DependentUpon>gallery-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\gallery\gallery-list.css">
+      <DependentUpon>gallery-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\gallery\gallery-list.html">
+      <DependentUpon>gallery-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\app.css">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\app.html">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\header.css">
+      <DependentUpon>header.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\header.html">
+      <DependentUpon>header.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\home.css">
+      <DependentUpon>home.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\home.html">
+      <DependentUpon>home.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\login.css">
+      <DependentUpon>login.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\general\login.html">
+      <DependentUpon>login.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\photo\photo-editor.css">
+      <DependentUpon>photo-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\photo\photo-editor.html">
+      <DependentUpon>photo-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\photo\photo-list.css">
+      <DependentUpon>photo-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\photo\photo-list.html">
+      <DependentUpon>photo-list.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\photo\photo-upload.css">
+      <DependentUpon>photo-upload.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\photo\photo-upload.html">
+      <DependentUpon>photo-upload.ts</DependentUpon>
+    </Content>
     <Content Include="wwwroot\components\shared\button.css">
       <DependentUpon>button.ts</DependentUpon>
     </Content>
@@ -206,6 +264,12 @@
     <Content Include="package.json" />
     <Content Include="wwwroot\components\shared\tabs.html">
       <DependentUpon>tabs.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\tag\tag-editor.html">
+      <DependentUpon>tag-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\tag\tag-list.html">
+      <DependentUpon>tag-list.ts</DependentUpon>
     </Content>
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
@@ -249,6 +313,7 @@
     <Compile Include="Server\Config\ConfigurationProvider.cs" />
     <Compile Include="Server\Config\Contracts\IAuthConfiguration.cs" />
     <Compile Include="Server\Config\Contracts\IConfigurationProvider.cs" />
+    <Compile Include="Server\Controllers\AuthorController.cs" />
     <Compile Include="Server\Controllers\BrandController.cs" />
     <Compile Include="Server\Controllers\GalleryController.cs" />
     <Compile Include="Server\Controllers\PhotoController.cs" />
@@ -347,10 +412,13 @@
     <TypeScriptCompile Include="libs\safeDigest.ts" />
     <TypeScriptCompile Include="libs\store.ts" />
     <TypeScriptCompile Include="node_modules\rx\ts\rx.all.d.ts" />
+    <TypeScriptCompile Include="wwwroot\actions\author-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\brand-actions.ts" />
+    <TypeScriptCompile Include="wwwroot\actions\description-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\gallery-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\index.ts" />
     <TypeScriptCompile Include="wwwroot\actions\photo-actions.ts" />
+    <TypeScriptCompile Include="wwwroot\actions\sponsor-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\tab-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\tag-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\user-actions.ts" />
@@ -359,6 +427,12 @@
     <TypeScriptCompile Include="wwwroot\bootstrap.reducers.ts" />
     <TypeScriptCompile Include="wwwroot\bootstrap.services.ts" />
     <TypeScriptCompile Include="wwwroot\bootstrap.ts" />
+    <TypeScriptCompile Include="wwwroot\components\author\author-editor.ts" />
+    <TypeScriptCompile Include="wwwroot\components\author\author-list.ts" />
+    <TypeScriptCompile Include="wwwroot\components\brand\brand-editor.ts" />
+    <TypeScriptCompile Include="wwwroot\components\brand\brand-list.ts" />
+    <TypeScriptCompile Include="wwwroot\components\description\description-editor.ts" />
+    <TypeScriptCompile Include="wwwroot\components\description\description-list.ts" />
     <TypeScriptCompile Include="wwwroot\components\gallery\gallery-editor.ts" />
     <TypeScriptCompile Include="wwwroot\components\gallery\gallery-list.ts" />
     <TypeScriptCompile Include="wwwroot\components\general\app.ts" />
@@ -366,11 +440,17 @@
     <TypeScriptCompile Include="wwwroot\components\general\home.ts" />
     <TypeScriptCompile Include="wwwroot\components\general\login.ts" />
     <TypeScriptCompile Include="wwwroot\components\index.ts" />
+    <TypeScriptCompile Include="wwwroot\components\photo\photo-editor.ts" />
+    <TypeScriptCompile Include="wwwroot\components\photo\photo-list.ts" />
     <TypeScriptCompile Include="wwwroot\components\photo\photo-upload.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\button.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\tab-content.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\tab-title.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\tabs.ts" />
+    <TypeScriptCompile Include="wwwroot\components\sponsor\sponsor-editor.ts" />
+    <TypeScriptCompile Include="wwwroot\components\sponsor\sponsor-list.ts" />
+    <TypeScriptCompile Include="wwwroot\components\tag\tag-editor.ts" />
+    <TypeScriptCompile Include="wwwroot\components\tag\tag-list.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\brand-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\gallery-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\index.ts" />
@@ -378,7 +458,10 @@
     <TypeScriptCompile Include="wwwroot\reducers\tab-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\tag-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\user-reducers.ts" />
+    <TypeScriptCompile Include="wwwroot\services\author-service.ts" />
+    <TypeScriptCompile Include="wwwroot\services\base-service.ts" />
     <TypeScriptCompile Include="wwwroot\services\brand-service.ts" />
+    <TypeScriptCompile Include="wwwroot\services\description-service.ts" />
     <TypeScriptCompile Include="wwwroot\services\gallery-service.ts" />
     <TypeScriptCompile Include="wwwroot\services\index.ts" />
     <TypeScriptCompile Include="wwwroot\services\photo-service.ts" />
