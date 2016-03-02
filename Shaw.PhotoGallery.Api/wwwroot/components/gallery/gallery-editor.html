@@ -1,0 +1,24 @@
+﻿<div class="galleryEditor">
+
+    <h1>Create Gallery</h1>
+
+    <div>
+        <input type="text" placeholder="Gallery Name" data-ng-model="vm.name" />
+    </div>
+
+    <div>
+        <input type="text" placeholder="Gallery Title" data-ng-model="vm.title" />
+    </div>
+
+    <div>
+        <input type="text" placeholder="Gallery Author Name" data-ng-model="vm.authorName" />
+    </div>
+    
+    <div>
+        <textarea ui-tinymce ng-model="vm.description"></textarea>
+    </div>
+
+    <div>
+        <button data-ng-click="vm.addOrUpdate()">Save</button>
+    </div>
+</div>

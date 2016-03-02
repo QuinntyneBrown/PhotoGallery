@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaw.PhotoGallery.Api", "Shaw.PhotoGallery.Api\Shaw.PhotoGallery.Api.csproj", "{50379A73-CF86-4E21-92EC-6812C4DD0015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaw.WebSite", "Shaw.WebSite\Shaw.WebSite.csproj", "{C04A8B17-6845-47FC-AEA4-18A6CE546886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaw.UI.Components", "Shaw.UI.Components\Shaw.UI.Components.csproj", "{6C69D35F-0408-4220-8542-EADE7A53FFDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50379A73-CF86-4E21-92EC-6812C4DD0015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50379A73-CF86-4E21-92EC-6812C4DD0015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50379A73-CF86-4E21-92EC-6812C4DD0015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50379A73-CF86-4E21-92EC-6812C4DD0015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04A8B17-6845-47FC-AEA4-18A6CE546886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04A8B17-6845-47FC-AEA4-18A6CE546886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04A8B17-6845-47FC-AEA4-18A6CE546886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04A8B17-6845-47FC-AEA4-18A6CE546886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C69D35F-0408-4220-8542-EADE7A53FFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C69D35F-0408-4220-8542-EADE7A53FFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C69D35F-0408-4220-8542-EADE7A53FFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C69D35F-0408-4220-8542-EADE7A53FFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

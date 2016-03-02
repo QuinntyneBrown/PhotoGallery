@@ -1,0 +1,54 @@
+.photoUpload-dropZone {
+    background-color:azure;
+    height:500px;
+    width:500px;
+}
+.galleryEditor {
+
+}
+
+
+.appHeader {
+    height:50px;
+}
+
+.appHeader a {
+    padding:7.5px;
+    text-transform: uppercase;
+}
+
+.appHeader a.selected { font-weight:800; background-color:#F36C81; color:#EEE; }
+
+body {
+}
+
+.button {
+    margin-top:15px;
+    margin-bottom:30px;
+    line-height:30px;
+    width:75px;
+    background-color:#FFF;
+    border: solid 1px;
+    cursor:pointer;
+}
+
+.tab-title {
+    display:inline-block;
+    font-weight:100;
+    width:200px;
+    height:75px;
+    text-align:center;
+    text-transform:uppercase;    
+}
+
+
+.tab-title.tabs-titleselected {
+    font-weight:800;
+}
+
+
+.tabs-contentInActive {
+    display:none;
+}
+
+
