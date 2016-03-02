@@ -1,4 +1,5 @@
-﻿export * from "./brand-actions";
+﻿export * from "./author-actions";
+export * from "./brand-actions";
 export * from "./gallery-actions";
 export * from "./photo-actions";
 export * from "./user-actions";

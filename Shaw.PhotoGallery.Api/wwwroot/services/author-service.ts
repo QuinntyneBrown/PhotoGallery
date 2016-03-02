@@ -1,10 +1,10 @@
 ﻿import { BaseService } from "./base-service";
 
-export class TagService extends BaseService {
+export class AuthorService extends BaseService {
     constructor($q: angular.IQService, apiEndpoint, fetch) {
         super($q, apiEndpoint, fetch)
     }
 
-    get baseUri() { return this.apiEndpoint.getBaseUrl() + "/tag"; }
+    get baseUri() { return this.apiEndpoint.getBaseUrl() + "/author"; }
 
 }

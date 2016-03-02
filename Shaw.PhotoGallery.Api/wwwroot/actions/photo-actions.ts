@@ -5,7 +5,7 @@ export class PhotoActionCreator {
 
 }
 
-export class AddPhotoAction { constructor(public id, public entity) { } }
+export class AddOrUpdatePhotoAction { constructor(public id, public entity) { } }
 
 export class AllPhotosAction { constructor(public id, public entities) { } }
 
