@@ -1,6 +1,5 @@
 ﻿export function Component(config: any = {}) {
     return function (cls) {
-        alert("wtf");
         config.component = cls;
         cls.config = config;
     };

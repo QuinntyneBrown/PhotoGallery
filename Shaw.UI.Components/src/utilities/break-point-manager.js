@@ -33,5 +33,4 @@ var BreakPointManager = (function () {
     return BreakPointManager;
 })();
 exports.BreakPointManager = BreakPointManager;
-var breakPointManager = new BreakPointManager(window);
 //# sourceMappingURL=break-point-manager.js.map

@@ -64,9 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="components\photo-gallery\photo-gallery.component.html">
+    <Content Include="libs\angular.js" />
+    <Content Include="src\components\photo-gallery.component.html">
       <DependentUpon>photo-gallery.component.ts</DependentUpon>
     </Content>
+    <Content Include="demos\photo-gallery\images\1-tree-stump-coffee-table1_940x640.jpg" />
+    <Content Include="demos\photo-gallery\images\13-tree-stump-planters1_940x640.jpg" />
+    <Content Include="demos\photo-gallery\images\14-tree-stump-wine-rack1_940x640.jpg" />
+    <Content Include="demos\photo-gallery\images\Loveland-1_940x640.jpg" />
+    <Content Include="demos\photo-gallery\images\Loveland-2_940x640.jpg" />
+    <Content Include="demos\photo-gallery\images\Loveland-4_940x640.jpg" />
+    <Content Include="demos\photo-gallery\index.html" />
     <Content Include="tsconfig.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -76,7 +84,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="components\photo-gallery\photo-gallery-component.css">
+    <Content Include="src\components\photo-gallery-component.css">
       <DependentUpon>photo-gallery.component.ts</DependentUpon>
     </Content>
     <Content Include="gulpfile.config.js" />
@@ -88,14 +96,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dist\" />
-    <Folder Include="services\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="bootstrap.photo-gallery.ts" />
-    <TypeScriptCompile Include="components\photo-gallery\photo-gallery.component.ts" />
-    <TypeScriptCompile Include="libs\break-point-manager.ts" />
-    <TypeScriptCompile Include="libs\component-decorators.ts" />
-    <TypeScriptCompile Include="libs\component-extension.ts" />
+    <TypeScriptCompile Include="demos\photo-gallery\photo-gallery.ts" />
+    <TypeScriptCompile Include="libs\a.ts" />
+    <TypeScriptCompile Include="src\bootstrap.components.ts" />
+    <TypeScriptCompile Include="src\bootstrap.services.ts" />
+    <TypeScriptCompile Include="src\bootstrap.ts" />
+    <TypeScriptCompile Include="src\bootstrap.utilities.ts" />
+    <TypeScriptCompile Include="src\services\overlay.ts" />
+    <TypeScriptCompile Include="src\components\photo-gallery.component.ts" />
+    <TypeScriptCompile Include="src\utilities\break-point-manager.ts" />
+    <TypeScriptCompile Include="src\utilities\component-decorators.ts" />
+    <TypeScriptCompile Include="src\utilities\component-extension.ts" />
+    <TypeScriptCompile Include="src\utilities\index.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />

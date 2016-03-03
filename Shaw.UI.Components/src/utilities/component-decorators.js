@@ -1,7 +1,6 @@
 function Component(config) {
     if (config === void 0) { config = {}; }
     return function (cls) {
-        alert("wtf");
         config.component = cls;
         cls.config = config;
     };

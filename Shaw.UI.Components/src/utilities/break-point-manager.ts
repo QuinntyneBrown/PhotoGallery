@@ -1,6 +1,6 @@
 ﻿﻿export class BreakPointManager {
 
-    constructor(private $window) {
+    constructor(private $window: angular.IWindowService) {
         $window.document.addEventListener("DOMContentLoaded", event => this.onChange(event));
         $window.addEventListener("resize", event => this.onChange(event));
         $window.addEventListener("orientationchange", event => this.onChange(event));
@@ -35,5 +35,4 @@
     }
 }
 
-var breakPointManager = new BreakPointManager(window);
 

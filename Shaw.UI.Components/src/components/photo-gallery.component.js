@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var component_decorators_1 = require("../../libs/component-decorators");
+var component_decorators_1 = require("../utilities/component-decorators");
 var PhotoGalleryComponent = (function () {
     function PhotoGalleryComponent($element) {
         this.$element = $element;

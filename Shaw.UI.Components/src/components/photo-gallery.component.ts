@@ -1,4 +1,4 @@
-﻿import { Component } from "../../libs/component-decorators";
+﻿import { Component } from "../utilities/component-decorators";
 
 @Component({
     selector: "photo-gallery",

@@ -18,14 +18,14 @@ gulp.task('libs', function () {
     return gulp.src(libs).pipe(gulp.dest(paths.lib));
 });
 
-gulp.task('photo-gallery-css', function () {
-    return gulp.src(["components/photo-gallery/**/*.css"])
-      .pipe(concat('photo-gallery-app.css'))
+gulp.task('shaw-components-css', function () {
+    return gulp.src(["src/components/**/*.css"])
+      .pipe(concat('shaw-components.css'))
       .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task("photo-gallery-webpack", function () {
-    return gulp.src('bootstrap.photo-gallery.ts')
+gulp.task("shaw-components-webpack", function () {
+    return gulp.src('src/bootstrap.ts')
     .pipe(webpack({
         resolve: {
             extensions: ["", ".js", ".ts"]
@@ -41,14 +41,14 @@ gulp.task("photo-gallery-webpack", function () {
             ]
         }
     }))
-    .pipe(rename("photo-gallery-app.js"))
+    .pipe(rename("shaw-components.js"))
     .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function () {
     gulp.watch([
         './components/**/*.ts', './components/**/*.html', './components/**/*.css'
-    ], ['photo-gallery-css', 'photo-gallery-webpack']);
+    ], ['shaw-components-css', 'shaw-components-webpack']);
 });
 
-gulp.task('default', ['photo-gallery-css', 'photo-gallery-webpack', 'watch']);
+gulp.task('default', ['shaw-components-css', 'shaw-components-webpack', 'watch']);
