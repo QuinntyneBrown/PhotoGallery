@@ -9,3 +9,4 @@ class AppComponent { }
 };
 
 app.component(AppComponent);
+
