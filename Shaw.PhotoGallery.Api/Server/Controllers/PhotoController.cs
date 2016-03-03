@@ -24,8 +24,8 @@ namespace Chloe.Server.Controllers
         {
             int galleryId = int.Parse(request.Headers.GetValues("x-galleryId").Single());
             var gallery = uow.Galleries.GetAll()
-                .Include(x=>x.GalleryPhotos)
-                .Include("GalleryPhotos.Photo")
+                .Include(x=>x.Photos)
+                .Include("Photos.Photo")
                 .Where(x=> x.Id == galleryId).Single();
 
             string workingFolder = System.Web.HttpContext.Current.Server.MapPath("~/Uploads");
@@ -49,11 +49,11 @@ namespace Chloe.Server.Controllers
                 photo.Modified = fileInfo.LastWriteTime;
                 photo.Size = fileInfo.Length / 1024;
 
-                if(gallery.GalleryPhotos.Where(x=>x.Photo.Name == photo.Name).FirstOrDefault() == null)
+                if(gallery.Photos.Where(x=>x.Photo.Name == photo.Name).FirstOrDefault() == null)
                 {
                     var galleryPhoto = new GalleryPhoto();
                     galleryPhoto.Photo = photo;
-                    gallery.GalleryPhotos.Add(galleryPhoto);
+                    gallery.Photos.Add(galleryPhoto);
                 }
                 uow.SaveChanges();
             }

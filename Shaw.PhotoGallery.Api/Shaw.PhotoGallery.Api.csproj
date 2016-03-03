@@ -25,6 +25,7 @@
     <TypeScriptEmitDecoratorMetadata>True</TypeScriptEmitDecoratorMetadata>
     <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
     <TypeScritModuleResolution>Classic</TypeScritModuleResolution>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -238,6 +239,9 @@
     <Content Include="wwwroot\components\photo\photo-upload.html">
       <DependentUpon>photo-upload.ts</DependentUpon>
     </Content>
+    <Content Include="wwwroot\components\search\search.html">
+      <DependentUpon>search.ts</DependentUpon>
+    </Content>
     <Content Include="wwwroot\components\shared\button.css">
       <DependentUpon>button.ts</DependentUpon>
     </Content>
@@ -271,14 +275,6 @@
     <Content Include="wwwroot\components\tag\tag-list.html">
       <DependentUpon>tag-list.ts</DependentUpon>
     </Content>
-    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
-    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
-    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
     <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
@@ -294,7 +290,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
-    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -316,7 +311,10 @@
     <Compile Include="Server\Controllers\AuthorController.cs" />
     <Compile Include="Server\Controllers\BrandController.cs" />
     <Compile Include="Server\Controllers\GalleryController.cs" />
+    <Compile Include="Server\Controllers\MetaDataItemController.cs" />
+    <Compile Include="Server\Controllers\OpenGraphDataItemController.cs" />
     <Compile Include="Server\Controllers\PhotoController.cs" />
+    <Compile Include="Server\Controllers\SearchController.cs" />
     <Compile Include="Server\Controllers\SponsorController.cs" />
     <Compile Include="Server\Controllers\TagController.cs" />
     <Compile Include="Server\Controllers\UserController.cs" />
@@ -329,17 +327,28 @@
     <Compile Include="Server\Data\EFRepository.cs" />
     <Compile Include="Server\Data\RepositoryProvider.cs" />
     <Compile Include="Server\Data\RespositoryFactories.cs" />
+    <Compile Include="Server\Dtos\AuthorAddOrUpdateRequestDto.cs" />
+    <Compile Include="Server\Dtos\AuthorAddOrUpdateResponseDto.cs" />
+    <Compile Include="Server\Dtos\AuthorDto.cs" />
+    <Compile Include="Server\Dtos\BrandAddOrUpdateRequestDto.cs" />
+    <Compile Include="Server\Dtos\BrandAddOrUpdateResponseDto.cs" />
     <Compile Include="Server\Dtos\BrandDto.cs" />
-    <Compile Include="Server\Dtos\BrandRequestDto.cs" />
+    <Compile Include="Server\Dtos\DescriptionAddOrUpdateRequestDto.cs" />
+    <Compile Include="Server\Dtos\DescriptionAddOrUpdateResponseDto.cs" />
+    <Compile Include="Server\Dtos\DescriptionDto.cs" />
     <Compile Include="Server\Dtos\FileDto.cs" />
     <Compile Include="Server\Dtos\GalleryAddOrUpdateRequestDto.cs" />
     <Compile Include="Server\Dtos\GalleryAddOrUpdateResponseDto.cs" />
     <Compile Include="Server\Dtos\GalleryDto.cs" />
     <Compile Include="Server\Dtos\ImageRequestDto.cs" />
     <Compile Include="Server\Dtos\OptionDto.cs" />
+    <Compile Include="Server\Dtos\PhotoAddOrUpdateRequestDto.cs" />
+    <Compile Include="Server\Dtos\PhotoAddOrUpdateResponseDto.cs" />
     <Compile Include="Server\Dtos\PhotoDto.cs" />
     <Compile Include="Server\Dtos\RegistrationRequestDto.cs" />
     <Compile Include="Server\Dtos\SignInDto.cs" />
+    <Compile Include="Server\Dtos\SponsorAddOrUpdateRequestDto.cs" />
+    <Compile Include="Server\Dtos\SponsorDto.cs" />
     <Compile Include="Server\Dtos\TagAddOrUpdateRequestDto.cs" />
     <Compile Include="Server\Dtos\TagAddOrUpdateResponseDto.cs" />
     <Compile Include="Server\Dtos\TagDto.cs" />
@@ -347,12 +356,20 @@
     <Compile Include="Server\Models\Author.cs" />
     <Compile Include="Server\Models\BaseEntity.cs" />
     <Compile Include="Server\Models\Brand.cs" />
+    <Compile Include="Server\Models\BrandGallery.cs" />
     <Compile Include="Server\Models\Description.cs" />
     <Compile Include="Server\Models\Gallery.cs" />
     <Compile Include="Server\Models\GalleryAuthor.cs" />
     <Compile Include="Server\Models\GalleryDescription.cs" />
+    <Compile Include="Server\Models\GalleryMetaDataItem.cs" />
+    <Compile Include="Server\Models\GalleryOpenGraphDataItem.cs" />
     <Compile Include="Server\Models\GalleryPhoto.cs" />
+    <Compile Include="Server\Models\GalleryPhotoMetaDataItem.cs" />
+    <Compile Include="Server\Models\GalleryPhotoOpenGraphDataItem.cs" />
+    <Compile Include="Server\Models\GalleryPhotoTag.cs" />
     <Compile Include="Server\Models\GalleryTag.cs" />
+    <Compile Include="Server\Models\MetaDataItem.cs" />
+    <Compile Include="Server\Models\OpenGraphDataItem.cs" />
     <Compile Include="Server\Models\Photo.cs" />
     <Compile Include="Server\Models\PhotoDescription.cs" />
     <Compile Include="Server\Models\PhotoTag.cs" />
@@ -371,17 +388,20 @@
     <Compile Include="Server\Services\Contracts\IEncryptionService.cs" />
     <Compile Include="Server\Services\Contracts\IGalleryService.cs" />
     <Compile Include="Server\Services\Contracts\IIdentityService.cs" />
+    <Compile Include="Server\Services\Contracts\IMetaDataService.cs" />
+    <Compile Include="Server\Services\Contracts\IOpenGraphService.cs" />
     <Compile Include="Server\Services\Contracts\IPhotoService.cs" />
     <Compile Include="Server\Services\Contracts\ISponsorService.cs" />
     <Compile Include="Server\Services\Contracts\ITagService.cs" />
     <Compile Include="Server\Services\Contracts\IUserService.cs" />
     <Compile Include="Server\Services\Contracts\MemoryCache.cs" />
-    <Compile Include="Server\Services\Contracts\SponserService.cs" />
     <Compile Include="Server\Services\DescriptionService.cs" />
     <Compile Include="Server\Services\EncryptionService.cs" />
     <Compile Include="Server\Services\GalleryService.cs" />
     <Compile Include="Server\Services\IdentityService.cs" />
     <Compile Include="Server\Services\InMemoryMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Server\Services\MetaDataService.cs" />
+    <Compile Include="Server\Services\OpenGraphService.cs" />
     <Compile Include="Server\Services\PhotoMultipartFormDataStreamProvider.cs" />
     <Compile Include="Server\Services\PhotoService.cs" />
     <Compile Include="Server\Services\SponsorService.cs" />
@@ -418,6 +438,7 @@
     <TypeScriptCompile Include="wwwroot\actions\gallery-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\index.ts" />
     <TypeScriptCompile Include="wwwroot\actions\photo-actions.ts" />
+    <TypeScriptCompile Include="wwwroot\actions\search-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\sponsor-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\tab-actions.ts" />
     <TypeScriptCompile Include="wwwroot\actions\tag-actions.ts" />
@@ -443,6 +464,7 @@
     <TypeScriptCompile Include="wwwroot\components\photo\photo-editor.ts" />
     <TypeScriptCompile Include="wwwroot\components\photo\photo-list.ts" />
     <TypeScriptCompile Include="wwwroot\components\photo\photo-upload.ts" />
+    <TypeScriptCompile Include="wwwroot\components\search\search.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\button.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\tab-content.ts" />
     <TypeScriptCompile Include="wwwroot\components\shared\tab-title.ts" />
@@ -455,6 +477,7 @@
     <TypeScriptCompile Include="wwwroot\reducers\gallery-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\index.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\photo-reducers.ts" />
+    <TypeScriptCompile Include="wwwroot\reducers\search-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\tab-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\tag-reducers.ts" />
     <TypeScriptCompile Include="wwwroot\reducers\user-reducers.ts" />
@@ -465,6 +488,7 @@
     <TypeScriptCompile Include="wwwroot\services\gallery-service.ts" />
     <TypeScriptCompile Include="wwwroot\services\index.ts" />
     <TypeScriptCompile Include="wwwroot\services\photo-service.ts" />
+    <TypeScriptCompile Include="wwwroot\services\search-service.ts" />
     <TypeScriptCompile Include="wwwroot\services\tag-service.ts" />
     <TypeScriptCompile Include="wwwroot\services\user-service.ts" />
   </ItemGroup>

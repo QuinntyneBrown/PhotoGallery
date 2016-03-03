@@ -12,7 +12,7 @@ namespace Chloe.Server.Dtos
         {
             this.Id = model.Id;
             this.Name = model.Name;
-            this.GalleryPhotosCount = model.GalleryPhotos.Count;
+            this.GalleryPhotosCount = model.Photos.Count;
         }
 
         public GalleryDto()

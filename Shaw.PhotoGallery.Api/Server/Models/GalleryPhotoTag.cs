@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Chloe.Server.Services.Contracts
+namespace Chloe.Server.Models
 {
-    public class SponserService
+    public class GalleryPhotoTag: Tag
     {
     }
 }

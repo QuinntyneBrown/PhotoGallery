@@ -6,4 +6,5 @@ export * from "./user-actions";
 export * from "./tag-actions";
 export * from "./tab-actions";
 export * from "./description-actions";
+export * from "./search-actions";
 export * from "./sponsor-actions";

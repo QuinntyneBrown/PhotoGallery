@@ -31,7 +31,7 @@ namespace Chloe.Server.Services
         {
             ICollection<GalleryDto> response = new HashSet<GalleryDto>();
             
-            foreach (var gallery in uow.Galleries.GetAll().Include(x=> x.GalleryPhotos).Where(x => x.IsDeleted == false))
+            foreach (var gallery in uow.Galleries.GetAll().Include(x=> x.Photos).Where(x => x.IsDeleted == false))
             {
                 response.Add(new GalleryDto(gallery));
             }

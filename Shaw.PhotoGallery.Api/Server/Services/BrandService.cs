@@ -5,7 +5,6 @@ using Chloe.Server.Services.Contracts;
 using Chloe.Server.Data.Contracts;
 using System.Linq;
 using Chloe.Server.Models;
-using System;
 
 namespace Chloe.Server.Services
 {
@@ -16,7 +15,7 @@ namespace Chloe.Server.Services
             this.uow = uow;
         }
 
-        public BrandDto Add(BrandRequestDto dto)
+        public BrandAddOrUpdateResponseDto Add(BrandAddOrUpdateRequestDto dto)
         {
             var brand = new Brand();
 
@@ -34,7 +33,7 @@ namespace Chloe.Server.Services
                 
 
             this.uow.SaveChanges();
-            return new BrandDto(brand);
+            return new BrandAddOrUpdateResponseDto(brand);
         }
 
         public ICollection<BrandDto> Get()
@@ -53,24 +52,6 @@ namespace Chloe.Server.Services
             uow.SaveChanges();
             return true;
         }
-
-        public ICollection<BrandDto> GetAllIncludingChildren()
-        {
-            var dtos = new List<BrandDto>();            
-            var brands = this.uow.Brands
-            .GetAll()
-            .Include("Providers.Bundles")
-            .Include("Providers.Photos")
-            .Where(x => x.IsDeleted == false)
-            .ToList();
-            foreach(var brand in brands)
-            {
-                dtos.Add(new BrandDto(brand));
-            }
-            return dtos;
-        }
-
-
 
         protected readonly IChloeUow uow;
     }

@@ -4,6 +4,7 @@ namespace Chloe.Server.Data.Contracts
 {
     public interface IChloeUow
     {
+        IRepository<Author> Authors { get; }
         IRepository<Brand> Brands { get; }
         IRepository<Photo> Photos { get; }
         IRepository<User> Users { get; }

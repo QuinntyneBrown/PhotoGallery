@@ -2,18 +2,18 @@
 
 namespace Chloe.Server.Models
 {
-    public class GalleryAuthor: BaseEntity
+    public class BrandGallery
     {
-        public GalleryAuthor()
+        public BrandGallery()
         {
 
         }
 
+        [ForeignKey("Brand")]
+        public int BrandId { get; set; }
         [ForeignKey("Gallery")]
         public int GalleryId { get; set; }
-        [ForeignKey("Author")]
-        public int AuthorId { get; set; }
+        public Brand Brand { get; set; }
         public Gallery Gallery { get; set; }
-        public Author Author { get; set; }
     }
 }

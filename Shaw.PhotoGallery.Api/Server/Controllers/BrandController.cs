@@ -4,6 +4,7 @@ using System.Web.Http;
 
 namespace Chloe.Server.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/brand")]
     public class BrandController : ApiController
     {
@@ -16,7 +17,7 @@ namespace Chloe.Server.Controllers
 
         [Route("add")]
         [HttpPost]
-        public IHttpActionResult Add(BrandRequestDto dto) { return Ok(this.service.Add(dto)); }
+        public IHttpActionResult Add(BrandAddOrUpdateRequestDto dto) { return Ok(this.service.Add(dto)); }
 
         [Route("remove")]
         [HttpDelete]

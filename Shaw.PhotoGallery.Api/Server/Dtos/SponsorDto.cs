@@ -1,27 +1,22 @@
 ﻿using Chloe.Server.Models;
-using System;
 
 namespace Chloe.Server.Dtos
 {
-    public class PhotoDto
+    public class SponsorDto
     {
-        public PhotoDto(Photo entity)
+        public SponsorDto(Sponsor entity)
         {
             this.Id = entity.Id;
             this.Name = entity.Name;
+            this.LogoUrl = entity.LogoUrl;
         }
 
-        public PhotoDto()
+        public SponsorDto()
         {
 
         }
-
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Modified { get; set; }
-        public long Size { get; set; }
-
-
+        public string LogoUrl { get; set; }
     }
 }

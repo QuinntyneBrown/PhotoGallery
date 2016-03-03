@@ -23,7 +23,11 @@ namespace Chloe.Server
             container.RegisterType<IIdentityService, IdentityService>();
             container.RegisterType<ICacheProvider, CacheProvider>();
             container.RegisterType<IConfigurationProvider,ConfigurationProvider>();
+            container.RegisterType<IAuthorService, AuthorService>();
             container.RegisterType<ITagService, TagService>();
+            container.RegisterType<IMetaDataService, MetaDataService>();
+            container.RegisterType<IOpenGraphService, OpenGraphService>();
+            container.RegisterType<ISponsorService, SponsorService>();
             return container;
         }
     }

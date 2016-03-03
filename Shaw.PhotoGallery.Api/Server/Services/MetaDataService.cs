@@ -2,7 +2,7 @@
 
 namespace Chloe.Server.Services
 {
-    public class DescriptionService: IDescriptionService
+    public class MetaDataService: IMetaDataService
     {
     }
 }

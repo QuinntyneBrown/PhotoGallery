@@ -5,7 +5,7 @@ namespace Chloe.Server.Services.Contracts
 {
     public interface IBrandService
     {
-        BrandDto Add(BrandRequestDto dto);
+        BrandAddOrUpdateResponseDto Add(BrandAddOrUpdateRequestDto dto);
         bool Remove(int id);
         ICollection<BrandDto> Get();
     }
