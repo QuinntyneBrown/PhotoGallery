@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Chloe.Server.Models
 {
@@ -16,7 +17,8 @@ namespace Chloe.Server.Models
         public string Title { get; set; }
         public DateTime PublishedDate { get; set; }
         public string Description { get; set; }
-        public int SponsorId { get; set; }
+        [ForeignKey("Sponsor")]
+        public int? SponsorId { get; set; }
         public Sponsor Sponsor { get; set; }
         public ICollection<GalleryTag> Tags { get; set; }
         public ICollection<GalleryPhoto> Photos { get; set; }

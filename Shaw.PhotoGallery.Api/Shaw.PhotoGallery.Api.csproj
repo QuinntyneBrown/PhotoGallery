@@ -347,6 +347,8 @@
     <Compile Include="Server\Dtos\GalleryAddOrUpdateResponseDto.cs" />
     <Compile Include="Server\Dtos\GalleryDto.cs" />
     <Compile Include="Server\Dtos\ImageRequestDto.cs" />
+    <Compile Include="Server\Dtos\MetaDataItemDto.cs" />
+    <Compile Include="Server\Dtos\OpenGraphDataItemDto.cs" />
     <Compile Include="Server\Dtos\OptionDto.cs" />
     <Compile Include="Server\Dtos\PhotoAddOrUpdateRequestDto.cs" />
     <Compile Include="Server\Dtos\PhotoAddOrUpdateResponseDto.cs" />

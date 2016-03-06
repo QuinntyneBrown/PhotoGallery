@@ -33,9 +33,16 @@ export class GalleryEditorComponent {
         this.invokeAsync({
             action: this.galleryActionCreator.addOrUpdate,
             params: {
-                id: this.id,
-                name: this.name,
-                description: this.description
+                data: {
+                    id: this.id,
+                    title: this.title,
+                    name: this.name,
+                    description: this.description,
+                    sponsorId: this.sponsorId,
+                    photos: this.photos,
+                    metaDate: this.metaData,
+                    openGraphData: this.openGraphData
+                }
             }
         }).then(() => {
             if (!this.id && this.entities.filter(entity => entity.name === this.name).length > 0) {

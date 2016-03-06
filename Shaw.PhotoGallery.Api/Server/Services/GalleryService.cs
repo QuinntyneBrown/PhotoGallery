@@ -22,7 +22,11 @@ namespace Chloe.Server.Services
                 .Where(x => x.Name == request.Name && x.IsDeleted == false)
                 .FirstOrDefault();
             if (gallery == null) uow.Galleries.Add(gallery = new Gallery());
-            gallery.Name = request.Name;
+            gallery.PublishedDate = DateTime.Now;
+            gallery.Title = request.Title;
+            gallery.Name = request.Title;
+            gallery.SponsorId = request.SponsorId;
+            gallery.Description = request.Description;
             uow.SaveChanges();
             return new GalleryAddOrUpdateResponseDto(gallery);
         }

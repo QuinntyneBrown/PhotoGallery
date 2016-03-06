@@ -10,3 +10,4 @@ angular.module("shaw.store", [])
     .run(["store", function (store) {
         alert("works?");
     }]);
+//# sourceMappingURL=bootstrap.store.js.map

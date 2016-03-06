@@ -76,3 +76,4 @@ var Dispatcher = (function (_super) {
     return Dispatcher;
 })(Rx.Subject);
 exports.Dispatcher = Dispatcher;
+//# sourceMappingURL=store.js.map

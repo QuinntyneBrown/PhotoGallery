@@ -3,3 +3,4 @@ require("../libs/angular");
 var app = angular.module("shaw.utilities", []);
 //app.service("breakPointManager", [services.BreakPointManager])
 //    .config(["breakPointManager", breakPointManager => { }]); 
+//# sourceMappingURL=bootstrap.utilities.js.map

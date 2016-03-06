@@ -27,7 +27,7 @@ export class BaseActionCreator {
         return newId;
     }
 
-    add = options => {
+    addOrUpdate = options => {
         var newId = this.guid();
         this.service.add({ data: options.data }).then(results => {
             var action = new this.addOrUpdateAction(newId, results);
