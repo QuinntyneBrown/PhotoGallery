@@ -13,8 +13,11 @@ export class PhotoUploadComponent {
         private $scope: ng.IScope) {        
     }
 
+    storeOnChange = state=> this.token = state.token;
+    
+    token; 
 
-    onInit = () => {
+    ngOnInit = () => {
         var drop = null;
         for (var i = 0; i < this.$element[0].children.length; i++) {
             if (this.$element[0].children[i].className == "photoUpload-dropZone") {
@@ -32,7 +35,7 @@ export class PhotoUploadComponent {
             dragEvent.stopPropagation();
             dragEvent.preventDefault();
             var scope = angular.element(dragEvent.currentTarget).scope();
-            var galleryId = (<any>scope).vm.$routeParams.galleryId;
+            var galleryId = (<any>scope).vm.$attrs.galleryId;            
             if (dragEvent.dataTransfer && dragEvent.dataTransfer.files) {
                 var packageFiles = function (fileList: FileList) {
                     var formData = new FormData();
@@ -44,7 +47,8 @@ export class PhotoUploadComponent {
 
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "/api/photo/upload", true);
-                xhr.setRequestHeader("x-galleryId", galleryId);
+                xhr.setRequestHeader("x-galleryId", galleryId || 0);
+                xhr.setRequestHeader("authorization", "Bearer " + this.token);
                 xhr.onload = (e) => {
                     if (xhr.readyState === 4) {
                         if (xhr.status === 200) {

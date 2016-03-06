@@ -23,7 +23,9 @@ namespace Chloe.Server.Controllers
         public async Task<IEnumerable<PhotoDto>> Upload(HttpRequestMessage request)
         {
             int galleryId = int.Parse(request.Headers.GetValues("x-galleryId").Single());
-            var gallery = uow.Galleries.GetAll()
+            var gallery = new Gallery();
+            if(galleryId != 0)
+                gallery = uow.Galleries.GetAll()
                 .Include(x=>x.Photos)
                 .Include("Photos.Photo")
                 .Where(x=> x.Id == galleryId).Single();
@@ -49,15 +51,33 @@ namespace Chloe.Server.Controllers
                 photo.Modified = fileInfo.LastWriteTime;
                 photo.Size = fileInfo.Length / 1024;
 
-                if(gallery.Photos.Where(x=>x.Photo.Name == photo.Name).FirstOrDefault() == null)
+                if (galleryId != 0)
                 {
-                    var galleryPhoto = new GalleryPhoto();
-                    galleryPhoto.Photo = photo;
-                    gallery.Photos.Add(galleryPhoto);
+                    if (gallery.Photos.Where(x => x.Photo.Name == photo.Name).FirstOrDefault() == null)
+                    {
+                        var galleryPhoto = new GalleryPhoto();
+                        galleryPhoto.Photo = photo;
+                        gallery.Photos.Add(galleryPhoto);
+                    }
+                } else {
+                    if(uow.Photos.GetAll().Where(x => x.Name == photo.Name).FirstOrDefault() == null)
+                    {
+                        uow.Photos.Add(photo);
+                    }
                 }
+
                 uow.SaveChanges();
             }
             return photos;
+        }
+
+
+        [HttpGet]
+        [Route("get")]
+        [AllowAnonymous]
+        public IHttpActionResult Get()
+        {
+            return Ok(this.uow.Photos.GetAll().ToList().Select(x => new PhotoDto(x)));
         }
 
         protected readonly IChloeUow uow;

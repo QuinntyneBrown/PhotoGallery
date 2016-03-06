@@ -41,6 +41,7 @@ app.config(["$routeProvider", "apiEndpointProvider", "initialStateProvider", "lo
                 tags: [],
                 users: [],
                 tabIndex: {},
+                token: null,
                 currentUser: null
             }
         });
