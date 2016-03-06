@@ -40,6 +40,7 @@ app.config(["$routeProvider", "apiEndpointProvider", "initialStateProvider", "lo
                 photos: [],
                 tags: [],
                 users: [],
+                tabIndex: {},
                 currentUser: null
             }
         });

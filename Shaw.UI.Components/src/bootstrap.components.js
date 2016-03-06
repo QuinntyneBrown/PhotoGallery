@@ -8,4 +8,3 @@ var app = angular.module("shaw.components", [
     "shaw.store"
 ]);
 app.component(photo_gallery_component_1.PhotoGalleryComponent);
-//# sourceMappingURL=bootstrap.components.js.map

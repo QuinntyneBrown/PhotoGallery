@@ -3,5 +3,7 @@
 @Component({
     templateUrl: "wwwroot/components/shared/button.html",
     selector: "pg-button",
+    componentName: "pgButtonComponent",
+    inputs: ['caption', 'onClick']
 })
 export class ButtonComponent { }

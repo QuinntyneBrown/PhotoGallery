@@ -1,8 +1,8 @@
 ﻿require("../libs/angular");
 
-import * as services  from "./utilities";
+//import * as services  from "./utilities";
 
-var app = angular.module("shaw.utilities", []);
+var app:any = angular.module("shaw.utilities", []);
 
-app.service("breakPointManager", [services.BreakPointManager])
-    .config(["breakPointManager", breakPointManager => { }]);
+//app.service("breakPointManager", [services.BreakPointManager])
+//    .config(["breakPointManager", breakPointManager => { }]);

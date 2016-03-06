@@ -1,24 +1,52 @@
 ﻿<div class="galleryEditor">
 
-    <h1>Create Gallery</h1>
+    <h1 data-ng-if="!vm.id">Create Gallery <span data-ng-if="vm.title.length > 1">: {{ vm.title }}</span></h1>
+
+    <h1 data-ng-if="vm.id">Edit Gallery : {{ vm.title }}</h1>
 
     <div>
-        <input type="text" placeholder="Gallery Name" data-ng-model="vm.name" />
+        <pg-button on-click="vm.create()" caption="'Create'"></pg-button>
+
+        <pg-button on-click="vm.addOrUpdate" caption="'Save'"></pg-button>
     </div>
 
-    <div>
-        <input type="text" placeholder="Gallery Title" data-ng-model="vm.title" />
-    </div>
+    <tabs tabs-name="gallery-editor">
 
-    <div>
-        <input type="text" placeholder="Gallery Author Name" data-ng-model="vm.authorName" />
-    </div>
-    
-    <div>
-        <textarea ui-tinymce ng-model="vm.description"></textarea>
-    </div>
+        <tab-title>General</tab-title>
 
-    <div>
-        <button data-ng-click="vm.addOrUpdate()">Save</button>
-    </div>
+        <tab-content>
+            <div>
+                <input type="text" placeholder="Gallery Title" data-ng-model="vm.title" />
+            </div>
+
+            <div>
+                <input type="text" placeholder="Gallery Author Name" data-ng-model="vm.authorName" />
+            </div>
+
+            <div>
+                <input type="text" placeholder="Gallery Sponsor" data-ng-model="vm.sponsorName" />
+            </div>
+
+        </tab-content>
+
+        <tab-title>Description</tab-title>
+
+        <tab-content>
+            <div>
+                <textarea ui-tinymce ng-model="vm.description"></textarea>
+            </div>
+        </tab-content>
+
+        <tab-title>Tags</tab-title>
+
+        <tab-content>
+
+        </tab-content>
+
+        <tab-title>Meta Data</tab-title>
+
+        <tab-content>
+
+        </tab-content>
+    </tabs>
 </div>

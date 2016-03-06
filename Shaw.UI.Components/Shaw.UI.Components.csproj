@@ -25,6 +25,7 @@
     <TypeScriptEmitDecoratorMetadata>True</TypeScriptEmitDecoratorMetadata>
     <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
     <TypeScritModuleResolution>Classic</TypeScritModuleResolution>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="dist\shaw-components.css" />
     <Content Include="dist\shaw-components.js" />
     <Content Include="libs\angular.js" />
     <Content Include="node_modules\rx\dist\rx.all.compat.min.js" />
@@ -110,6 +112,7 @@
     <TypeScriptCompile Include="src\utilities\component-decorators.ts" />
     <TypeScriptCompile Include="src\utilities\component-extension.ts" />
     <TypeScriptCompile Include="src\utilities\index.ts" />
+    <TypeScriptCompile Include="src\utilities\local-storage-manager-provider.ts" />
     <TypeScriptCompile Include="src\utilities\store.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="typings\es6-shim\es6-shim.d.ts" />

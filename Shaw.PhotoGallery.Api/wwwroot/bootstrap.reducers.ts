@@ -1,12 +1,14 @@
-﻿import { addGalleryReducer, allGalleriesReducer, removeGalleryReducer, userLoggedInReducer } from "./reducers";
+﻿import * as reducers from "./reducers";
 
 var app = (<any>angular.module("reducers", [
     "store"
 ]));
 
 app.config(["reducersProvider", reducersProvider => {
-    reducersProvider.configure(addGalleryReducer);
-    reducersProvider.configure(allGalleriesReducer);
-    reducersProvider.configure(removeGalleryReducer);
-    reducersProvider.configure(userLoggedInReducer);
+    reducersProvider.configure(reducers.addGalleryReducer);
+    reducersProvider.configure(reducers.allGalleriesReducer);
+    reducersProvider.configure(reducers.removeGalleryReducer);
+    reducersProvider.configure(reducers.userLoggedInReducer);
+    reducersProvider.configure(reducers.setCurrentTabReducer);
+    reducersProvider.configure(reducers.tabChildLoadedReducer);
 }])

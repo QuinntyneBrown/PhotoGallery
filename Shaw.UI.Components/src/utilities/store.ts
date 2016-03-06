@@ -1,5 +1,8 @@
 ﻿/// <reference path="../../typings/tsd.d.ts" />
 
+export * from "./local-storage-manager-provider";
+
+
 export interface IAppState {
     lastTriggeredByActionId: any;
     lastTriggeredByAction: any;

@@ -1,4 +1,6 @@
-﻿var app: any = angular.module("photoGalleryApp", []);
+﻿var app: any = angular.module("photoGalleryApp", [
+    "shaw.components.library"
+]);
 
 class AppComponent { }
 

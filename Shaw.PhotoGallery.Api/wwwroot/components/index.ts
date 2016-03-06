@@ -7,3 +7,8 @@ export * from "./general/header";
 export * from "./general/login";
 export * from "./gallery/gallery-list";
 export * from "./gallery/gallery-editor";
+
+export * from "./shared/button";
+export * from "./shared/tab-content";
+export * from "./shared/tab-title";
+export * from "./shared/tabs";

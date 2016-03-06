@@ -1,4 +1,6 @@
-var app = angular.module("photoGalleryApp", []);
+var app = angular.module("photoGalleryApp", [
+    "shaw.components.library"
+]);
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -10,4 +12,3 @@ AppComponent.config = {
     component: AppComponent
 };
 app.component(AppComponent);
-//# sourceMappingURL=photo-gallery.js.map

@@ -1,7 +1,7 @@
 var LocalStorageManagerProvider = (function () {
     function LocalStorageManagerProvider() {
         var _this = this;
-        this.id = "f30e5bdd-efd2-4481-acbe-f628f494eb99";
+        this.id = "f3fc5e84-c424-4450-a05b-3f25c2ca2e92";
         this._items = null;
         this.get = function (options) {
             var storageItem = null;
@@ -51,4 +51,4 @@ var LocalStorageManagerProvider = (function () {
     });
     return LocalStorageManagerProvider;
 })();
-angular.module("localStorageManager", []).provider("localStorageManager", LocalStorageManagerProvider);
+exports.LocalStorageManagerProvider = LocalStorageManagerProvider;

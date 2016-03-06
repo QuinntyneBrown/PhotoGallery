@@ -4,7 +4,8 @@ import { TabActionCreator } from "../../actions";
 @Component({
     templateUrl: "wwwroot/components/shared/tab-title.html",
     selector: "tab-title",
-    providers: ["tabActionCreator"]
+    providers: ["$attrs","tabActionCreator"],
+    transclude: true
 })
 export class TabTitleComponent {
     constructor(private $attrs: angular.IAttributes, private tabActionCreator: TabActionCreator) {}    

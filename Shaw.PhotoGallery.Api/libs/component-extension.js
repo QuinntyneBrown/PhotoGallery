@@ -92,8 +92,8 @@ angular.module = function () {
                         scope.vm.$transclude(scope, function (clone) {
                             scope.vm.clone = clone;
                         });
-                    if (scope.vm && scope.vm.onInit)
-                        scope.vm.onInit();
+                    if (scope.vm && scope.vm.ngOnInit)
+                        scope.vm.ngOnInit();
                     if (scope.vm.dispose)
                         scope.$on("$destroy", function () {
                             scope.vm.dispose();
@@ -106,4 +106,3 @@ angular.module = function () {
     };
     return m;
 };
-//# sourceMappingURL=component-extension.js.map

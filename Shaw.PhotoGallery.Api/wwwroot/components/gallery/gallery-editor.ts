@@ -19,9 +19,14 @@ export class GalleryEditorComponent {
 
     storeOnChange = state => {
         this.id = null;
+        this.title = null;
         this.name = null;
+        this.sponsor = null;
+        this.sponsorId = null;
         this.photos = [];
-        this.authorName = null;
+        this.metaData = [];
+        this.tags = [];
+        this.openGraphData = [];
     }
 
     addOrUpdate = () => {
@@ -46,9 +51,17 @@ export class GalleryEditorComponent {
          
     id;
     name;
-    photos: Array<any>;
-    authorName;
+    title;
+    sponsor;
+    sponsorId;    
     description;
-    entities;
+    tags: Array<any>;
+    photos: Array<any>;
+    metaData: Array<any>;
+    openGraphData: Array<any>;
+    entities: Array<any> = [];
+
+    authors: Array<any>;
+    sponsors: Array<any>;
     baseUrl;
 }

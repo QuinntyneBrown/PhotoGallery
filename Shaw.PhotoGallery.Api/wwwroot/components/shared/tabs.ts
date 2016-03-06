@@ -1,14 +1,19 @@
-﻿import { TabChildLoadedAction, SetCurrentTabAction } from "../../actions";
+﻿import { TabActionCreator, TabChildLoadedAction, SetCurrentTabAction } from "../../actions";
 import { CanActivate, Component } from "../../../libs/component-decorators";
-import { TabActionCreator } from "../../actions";
 
 @Component({
     templateUrl: "wwwroot/components/shared/tabs.html",
     selector: "tabs",
-    providers: ["$atts", "$attrs","tabActionCreator", "tabActionCreator"]
+    providers: ["$attrs", "$element", "tabActionCreator"],
+    transclude: {
+        'title': '?tabTitle',
+        'content': '?tabContent'
+    }
 })
 export class TabsComponent {
-    constructor(private $attrs: angular.IAttributes, private $element: angular.IAugmentedJQuery, private tabActionCreator) { }
+    constructor(private $attrs: angular.IAttributes,
+        private $element: angular.IAugmentedJQuery,
+        private tabActionCreator) { }
 
     storeOnChange = state => {            
         this.currentIndex = state.tabIndex[this.$attrs["tabsName"]] || 0;

@@ -1,6 +1,5 @@
 require("../libs/angular");
-var services = require("./utilities");
+//import * as services  from "./utilities";
 var app = angular.module("shaw.utilities", []);
-app.service("breakPointManager", [services.BreakPointManager])
-    .config(["breakPointManager", function (breakPointManager) { }]);
-//# sourceMappingURL=bootstrap.utilities.js.map
+//app.service("breakPointManager", [services.BreakPointManager])
+//    .config(["breakPointManager", breakPointManager => { }]); 

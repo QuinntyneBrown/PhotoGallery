@@ -1,9 +1,9 @@
-﻿class LocalStorageManagerProvider implements angular.IServiceProvider {
+﻿export class LocalStorageManagerProvider {
     constructor() {
         window.onbeforeunload = () => localStorage.setItem(this.id, JSON.stringify(this.items))
     }
-
-    private id = "f30e5bdd-efd2-4481-acbe-f628f494eb99";
+    
+    private id = "f3fc5e84-c424-4450-a05b-3f25c2ca2e92";
 
     private _items = null;
 
@@ -57,6 +57,3 @@
     $get = () => this;
 
 }
-
-
-angular.module("localStorageManager", []).provider("localStorageManager", LocalStorageManagerProvider);

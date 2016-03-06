@@ -23,4 +23,3 @@ var PhotoGalleryComponent = (function () {
     return PhotoGalleryComponent;
 })();
 exports.PhotoGalleryComponent = PhotoGalleryComponent;
-//# sourceMappingURL=photo-gallery.component.js.map

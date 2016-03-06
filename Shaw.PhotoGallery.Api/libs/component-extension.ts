@@ -111,8 +111,8 @@ angular.module = function () {
                             scope.vm.clone = clone;
                         });
 
-                    if (scope.vm && scope.vm.onInit)
-                        scope.vm.onInit();
+                    if (scope.vm && scope.vm.ngOnInit)
+                        scope.vm.ngOnInit();
 
                     if (scope.vm.dispose)
                         scope.$on("$destroy", () => {

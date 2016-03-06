@@ -4,6 +4,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require("./local-storage-manager-provider"));
 var InitialStateProvider = (function () {
     function InitialStateProvider() {
         var _this = this;
@@ -72,4 +76,3 @@ var Dispatcher = (function (_super) {
     return Dispatcher;
 })(Rx.Subject);
 exports.Dispatcher = Dispatcher;
-//# sourceMappingURL=store.js.map
