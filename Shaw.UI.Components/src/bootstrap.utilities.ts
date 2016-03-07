@@ -12,7 +12,8 @@ var app: any = angular.module("shaw.utilities", [
     "routeWhenExtension",
     "safeDigest"]);
 
-
+app.provider("localStorageManager", utilities.LocalStorageManagerProvider);
+app.service("fetch", ["$http","$q","localStorageManager",utilities.fetch]);
 app.value("appendToBodyAsync", utilities.appendToBodyAsync);
 app.value("extendCssAsync", utilities.extendCssAsync);
 app.value("removeElement", utilities.removeElement);

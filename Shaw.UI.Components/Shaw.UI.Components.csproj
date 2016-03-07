@@ -109,6 +109,7 @@
     <TypeScriptCompile Include="src\bootstrap.services.ts" />
     <TypeScriptCompile Include="src\bootstrap.ts" />
     <TypeScriptCompile Include="src\bootstrap.utilities.ts" />
+    <TypeScriptCompile Include="src\services\gallery-service.ts" />
     <TypeScriptCompile Include="src\services\index.ts" />
     <TypeScriptCompile Include="src\services\overlay.ts" />
     <TypeScriptCompile Include="src\components\photo-gallery.component.ts" />
@@ -119,6 +120,7 @@
     <TypeScriptCompile Include="src\utilities\component-decorators.ts" />
     <TypeScriptCompile Include="src\utilities\component-extension.ts" />
     <TypeScriptCompile Include="src\utilities\extend-css-async.ts" />
+    <TypeScriptCompile Include="src\utilities\fetch.ts" />
     <TypeScriptCompile Include="src\utilities\index.ts" />
     <TypeScriptCompile Include="src\utilities\local-storage-manager-provider.ts" />
     <TypeScriptCompile Include="src\utilities\remove-element.ts" />

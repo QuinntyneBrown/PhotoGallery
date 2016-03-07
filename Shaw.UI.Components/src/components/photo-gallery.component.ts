@@ -2,8 +2,8 @@
 
 @Component({
     selector: "photo-gallery",
-    tempalteUrl: "./photo-gallery.component.html",
-    inputs: ["$element"]
+    tempalteUrl: "src/components/photo-gallery.component.html",
+    providers: ["$element"]
 })
 export class PhotoGalleryComponent {
     constructor(private $element: angular.IAugmentedJQuery) { }
