@@ -1,51 +1,11 @@
 ﻿import { IDispatcher } from "../../libs/store";
+import { BaseActionCreator } from "./base-actions";
 
-export class TagActionCreator {
-    constructor(private $location,private tagService, private dispatcher: IDispatcher, private guid) { }
-
-    create = () => {
-        this.dispatcher.dispatch(new SetCurrentTagAction(null));
-        this.$location.path("/tag/list");
+export class TagActionCreator extends BaseActionCreator  {
+    constructor(dispatcher: IDispatcher, guid, tagService) {
+        super(tagService,dispatcher,guid,AddOrUpdateTagAction,AllTagsAction,RemoveTagAction)
     }
-
-    edit = (options) => {
-        this.dispatcher.dispatch(new SetCurrentTagAction(options.entity));
-        this.$location.path("/tag/edit/" + options.entity.id);
-    }
-
-    getById = options => {
-        var newId = this.guid();
-        this.tagService.get().then(results => {
-            var action = new AddOrUpdateTagAction(newId, results);
-            this.dispatcher.dispatch(action);
-        });
-        return newId;
-    }
-
-    all = () => {
-        var newId = this.guid();
-        this.tagService.get().then(results => {
-            var action = new AllTagsAction(newId, results);
-            this.dispatcher.dispatch(action);
-        });
-        return newId;
-    }
-
-    addOrUpdate = options => {
-        var newId = this.guid();
-        this.tagService.add({ data: options.data }).then(results => {
-            var action = new AddOrUpdateTagAction(newId, results);
-            this.dispatcher.dispatch(action);
-        });
-        return newId;
-    }
-
-    remove = options => {
-        var newId = this.guid();
-        this.tagService.remove({ id: options.entity.id })
-            .then(results => this.dispatcher.dispatch(new RemoveTagAction(newId, options.entity)));
-        return newId;
-    }
+    
 
 }
 

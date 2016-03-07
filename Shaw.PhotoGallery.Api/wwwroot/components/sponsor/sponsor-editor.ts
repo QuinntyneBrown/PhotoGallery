@@ -17,20 +17,17 @@ import { SponsorActionCreator } from "../../actions";
 export class sponsorEditorComponent {
     constructor(private $location, private sponsorActionCreator, private invokeAsync) { }
 
-    storeOnChange = state => {
-        this.id = null;
-        this.name = null;
-        this.photos = [];
-        this.authorName = null;
-    }
+    storeOnChange = state => { }
 
     addOrUpdate = () => {
         this.invokeAsync({
             action: this.sponsorActionCreator.addOrUpdate,
             params: {
-                id: this.id,
-                name: this.name,
-                description: this.description
+                data: {
+                    id: this.id,
+                    name: this.name,
+                    description: this.description
+                }
             }
         }).then(() => {
             if (!this.id && this.entities.filter(entity => entity.name === this.name).length > 0) {

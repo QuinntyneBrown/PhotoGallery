@@ -7,7 +7,7 @@ import { CanActivate, Component } from "../../../libs/component-decorators";
     selector: "tag-editor",
     providers: ["$location", "$routeParams", "invokeAsync", "tagActionCreator"]
 })
-@CanActivate(["$route", "invokeAsync", "tagActionCreator", ($route, invokeAsync, tagActionCreator) => {
+@CanActivate(["$route", "invokeAsync", "$routeParams","tagActionCreator", ($route, invokeAsync, tagActionCreator) => {
     var id = $route.current.params.id;
     return invokeAsync({
         action: tagActionCreator.getById,
@@ -15,7 +15,9 @@ import { CanActivate, Component } from "../../../libs/component-decorators";
     });
 }])
 export class TagEditorComponent {
-    constructor(private $location: angular.ILocationService, private $routeParams: angular.route.IRouteParamsService, private invokeAsync, private tagActionCreator: TagActionCreator) { }
+    constructor(private $location: angular.ILocationService, private $routeParams: angular.route.IRouteParamsService, private invokeAsync, private tagActionCreator: TagActionCreator) {
+        
+    }
 
     storeOnChange = state => {
         if (state.lastTriggeredByAction == RemoveTagAction && this.entities.filter(entity => entity.id === this.id).length < 1)
@@ -29,12 +31,15 @@ export class TagEditorComponent {
     }
 
     addOrUpdate = () => {
+        alert("QB");
         this.invokeAsync({
             action: this.tagActionCreator.addOrUpdate,
             params: {
-                id: this.id,
-                name: this.name,
-                description: this.description,
+                data: {
+                    id: this.id,
+                    name: this.name,
+                    description: this.description,
+                }
             }
         }).then(() => {
             if (!this.id && this.entities.filter(entity => entity.name === this.name).length > 0) {
@@ -50,7 +55,7 @@ export class TagEditorComponent {
 
     remove = () => this.tagActionCreator.remove({ id: this.id });
 
-    create = () => this.tagActionCreator.create();
+    //create = () => this.tagActionCreator.create();
 
     entities;
 

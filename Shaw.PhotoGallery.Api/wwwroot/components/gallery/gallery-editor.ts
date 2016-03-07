@@ -18,15 +18,15 @@ export class GalleryEditorComponent {
     constructor(private $location, private galleryActionCreator, private invokeAsync) { }
 
     storeOnChange = state => {
-        this.id = null;
-        this.title = null;
-        this.name = null;
-        this.sponsor = null;
-        this.sponsorId = null;
-        this.photos = [];
-        this.metaData = [];
-        this.tags = [];
-        this.openGraphData = [];
+        //this.id = null;
+        //this.title = null;
+        //this.name = null;
+        //this.sponsor = null;
+        //this.sponsorId = null;
+        //this.photos = [];
+        //this.metaData = [];
+        //this.tags = [];
+        //this.openGraphData = [];
     }
 
     addOrUpdate = () => {

@@ -29,6 +29,12 @@
 
         </tab-content>
 
+        <tab-title>Upload</tab-title>
+
+        <tab-content>
+            <photo-upload gallery-id="{{ vm.id }}"></photo-upload>
+        </tab-content>
+
         <tab-title>Description</tab-title>
 
         <tab-content>
@@ -40,10 +46,24 @@
         <tab-title>Tags</tab-title>
 
         <tab-content>
-
+            <tabs tabs-name="gallery-tags">
+                <tab-title>Tag List</tab-title>
+                <tab-content>
+                </tab-content>
+                <tab-title>Create</tab-title>
+                <tab-content>
+                    <tag-editor></tag-editor>
+                </tab-content>
+            </tabs>
         </tab-content>
 
         <tab-title>Meta Data</tab-title>
+
+        <tab-content>
+
+        </tab-content>
+
+        <tab-title>OG</tab-title>
 
         <tab-content>
 
@@ -55,10 +75,6 @@
 
         </tab-content>
 
-        <tab-title>Upload</tab-title>
 
-        <tab-content>
-            <photo-upload gallery-id="{{ vm.id }}"></photo-upload>
-        </tab-content>
     </tabs>
 </div>

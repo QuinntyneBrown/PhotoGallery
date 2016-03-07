@@ -167,12 +167,6 @@
     <Content Include="node_modules\angular\angular.js" />
     <Content Include="node_modules\angular\angular.min.js" />
     <Content Include="packages.config" />
-    <Content Include="Uploads\1-tree-stump-coffee-table.jpg" />
-    <Content Include="Uploads\13-tree-stump-planters.jpg" />
-    <Content Include="Uploads\14-tree-stump-wine-rack.jpg" />
-    <Content Include="Uploads\1-Loveland.jpg" />
-    <Content Include="Uploads\2-Loveland.jpg" />
-    <Content Include="Uploads\3-Loveland.jpg" />
     <Content Include="wwwroot\components\author\author-editor.css">
       <DependentUpon>author-editor.ts</DependentUpon>
     </Content>
@@ -421,6 +415,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="libs\addOrUpdate.ts" />
