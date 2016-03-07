@@ -2,8 +2,8 @@
 import { BaseActionCreator } from "./base-actions";
 
 export class GalleryActionCreator extends BaseActionCreator {
-    constructor(dispatcher: IDispatcher, galleryService, guid) {
-        super(galleryService,dispatcher,guid,AddOrUpdateGalleryAction,AllGalleriesAction,RemoveGalleryAction)
+    constructor($location: angular.ILocationService, dispatcher: IDispatcher, galleryService, guid) {
+        super($location,galleryService,dispatcher,guid,AddOrUpdateGalleryAction,AllGalleriesAction,RemoveGalleryAction)
     }    
 }
 

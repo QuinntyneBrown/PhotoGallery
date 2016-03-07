@@ -3,4 +3,8 @@ function __export(m) {
 }
 __export(require("./break-point-manager"));
 __export(require("./store"));
+__export(require("./append-to-body-async"));
+__export(require("./set-opacity-async"));
+__export(require("./extend-css-async"));
+__export(require("./remove-element"));
 //# sourceMappingURL=index.js.map

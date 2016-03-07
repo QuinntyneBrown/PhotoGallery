@@ -6,23 +6,25 @@
 <body data-ng-app="photoGalleryApp">
 
     <script>
-        var key = "f3fc5e84-c424-4450-a05b-3f25c2ca2e92";
-        var store = JSON.parse(localStorage.getItem(key));
-        var found = false;
-        var galleries = {};
-        for (var i = 0; i < store.length; i++) {
-            if (store[i].name === "/gallery/1") {
-                store[i].value = [];
-                found = true;
-            }
-        }
+        //var key = "f3fc5e84-c424-4450-a05b-3f25c2ca2e92";
+        //var store = JSON.parse(localStorage.getItem(key));
+        //var found = false;
+        //var galleries = {};
+        //for (var i = 0; i < store.length; i++) {
+        //    if (store[i].name === "/gallery/1") {
+        //        store[i].value = [];
+        //        found = true;
+        //    }
+        //}
 
-        if (!found)
-            store.push({ name: "/gallery/1", value: [] })
-        localStorage.setItem(key, JSON.stringify(store));
+        //if (!found)
+        //    store.push({ name: "/gallery/1", value: [] })
+        //localStorage.setItem(key, JSON.stringify(store));
     </script>
     <app></app>
-    <script src="../../node_modules/rx/dist/rx.all.compat.min.js"></script>
+    <div style="display:none;" ng-view>
+
+    </div>
     <script src="../../dist/shaw-components.js"></script>
     <script src="photo-gallery.js"></script>
 </body>

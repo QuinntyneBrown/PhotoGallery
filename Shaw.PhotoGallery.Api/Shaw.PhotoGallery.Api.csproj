@@ -376,9 +376,11 @@
     <Compile Include="Server\Models\PhotoDescription.cs" />
     <Compile Include="Server\Models\PhotoTag.cs" />
     <Compile Include="Server\Models\Role.cs" />
+    <Compile Include="Server\Models\SocialMedia.cs" />
     <Compile Include="Server\Models\Sponsor.cs" />
     <Compile Include="Server\Models\Tag.cs" />
     <Compile Include="Server\Models\User.cs" />
+    <Compile Include="Server\Models\UserBrand.cs" />
     <Compile Include="Server\Services\AuthorService.cs" />
     <Compile Include="Server\Services\BrandService.cs" />
     <Compile Include="Server\Services\CacheProvider.cs" />

@@ -1,7 +1,8 @@
 ﻿import { IDispatcher } from "../../libs/store";
 
 export class BaseActionCreator {
-    constructor(public service,
+    constructor(public $location: angular.ILocationService,
+        public service,
         public dispatcher: IDispatcher,
         public guid,
         private addOrUpdateAction,
@@ -45,6 +46,12 @@ export class BaseActionCreator {
         });
         return newId;
     }
+
+    edit = options => { }
+
+    baseUrl: string = "/gallery/";
+
+
 }
 
 export class AddOrUpdateAuthorAction { constructor(public id, public entity) { } }

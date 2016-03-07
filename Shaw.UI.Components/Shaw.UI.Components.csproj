@@ -65,19 +65,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="demos\photo-gallery\images\1-tree-stump-coffee-table1.jpg" />
+    <Content Include="demos\photo-gallery\images\13-tree-stump-planters1.jpg" />
+    <Content Include="demos\photo-gallery\images\14-tree-stump-wine-rack1.jpg" />
+    <Content Include="demos\photo-gallery\images\Loveland-1.jpg" />
+    <Content Include="demos\photo-gallery\images\Loveland-2.jpg" />
+    <Content Include="demos\photo-gallery\images\Loveland-4.jpg" />
     <Content Include="dist\shaw-components.css" />
     <Content Include="dist\shaw-components.js" />
+    <Content Include="libs\angular-route.min.js" />
     <Content Include="libs\angular.js" />
+    <Content Include="libs\jquery.min.js" />
+    <Content Include="libs\rx.all.compat.min.js" />
     <Content Include="node_modules\rx\dist\rx.all.compat.min.js" />
     <Content Include="src\components\photo-gallery.component.html">
       <DependentUpon>photo-gallery.component.ts</DependentUpon>
     </Content>
-    <Content Include="demos\photo-gallery\images\1-tree-stump-coffee-table1_940x640.jpg" />
-    <Content Include="demos\photo-gallery\images\13-tree-stump-planters1_940x640.jpg" />
-    <Content Include="demos\photo-gallery\images\14-tree-stump-wine-rack1_940x640.jpg" />
-    <Content Include="demos\photo-gallery\images\Loveland-1_940x640.jpg" />
-    <Content Include="demos\photo-gallery\images\Loveland-2_940x640.jpg" />
-    <Content Include="demos\photo-gallery\images\Loveland-4_940x640.jpg" />
     <Content Include="demos\photo-gallery\index.html" />
     <Content Include="tsconfig.json" />
     <None Include="Web.Debug.config">
@@ -106,13 +109,23 @@
     <TypeScriptCompile Include="src\bootstrap.services.ts" />
     <TypeScriptCompile Include="src\bootstrap.ts" />
     <TypeScriptCompile Include="src\bootstrap.utilities.ts" />
+    <TypeScriptCompile Include="src\services\index.ts" />
     <TypeScriptCompile Include="src\services\overlay.ts" />
     <TypeScriptCompile Include="src\components\photo-gallery.component.ts" />
+    <TypeScriptCompile Include="src\services\photo-gallery.ts" />
+    <TypeScriptCompile Include="src\utilities\%24q.ts" />
+    <TypeScriptCompile Include="src\utilities\append-to-body-async.ts" />
     <TypeScriptCompile Include="src\utilities\break-point-manager.ts" />
     <TypeScriptCompile Include="src\utilities\component-decorators.ts" />
     <TypeScriptCompile Include="src\utilities\component-extension.ts" />
+    <TypeScriptCompile Include="src\utilities\extend-css-async.ts" />
     <TypeScriptCompile Include="src\utilities\index.ts" />
     <TypeScriptCompile Include="src\utilities\local-storage-manager-provider.ts" />
+    <TypeScriptCompile Include="src\utilities\remove-element.ts" />
+    <TypeScriptCompile Include="src\utilities\route-when-extension.ts" />
+    <TypeScriptCompile Include="src\utilities\routeResolver.ts" />
+    <TypeScriptCompile Include="src\utilities\safe-digest.ts" />
+    <TypeScriptCompile Include="src\utilities\set-opacity-async.ts" />
     <TypeScriptCompile Include="src\utilities\store.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="typings\es6-shim\es6-shim.d.ts" />

@@ -2,8 +2,8 @@
 import { BaseActionCreator } from "./base-actions";
 
 export class TagActionCreator extends BaseActionCreator  {
-    constructor(dispatcher: IDispatcher, guid, tagService) {
-        super(tagService,dispatcher,guid,AddOrUpdateTagAction,AllTagsAction,RemoveTagAction)
+    constructor($location: angular.ILocationService, dispatcher: IDispatcher, guid, tagService) {
+        super($location, tagService,dispatcher,guid,AddOrUpdateTagAction,AllTagsAction,RemoveTagAction)
     }
     
 

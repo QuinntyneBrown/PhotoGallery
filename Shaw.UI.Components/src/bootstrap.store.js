@@ -7,7 +7,5 @@ angular.module("shaw.store", [])
     .provider("reducers", utilities.ReducersProvider)
     .provider("initialState", utilities.InitialStateProvider)
     .value("guid", utilities.guid)
-    .run(["store", function (store) {
-        alert("works?");
-    }]);
+    .run(["store", function (store) { }]);
 //# sourceMappingURL=bootstrap.store.js.map

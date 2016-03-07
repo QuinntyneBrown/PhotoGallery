@@ -9,6 +9,4 @@ angular.module("shaw.store", [])
     .provider("reducers", utilities.ReducersProvider)
     .provider("initialState", utilities.InitialStateProvider)
     .value("guid", utilities.guid)
-    .run(["store", store => {
-        alert("works?");        
-    }]);
+    .run(["store", store => { }]);

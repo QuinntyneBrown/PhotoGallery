@@ -47,7 +47,7 @@ gulp.task("shaw-components-webpack", function () {
 
 gulp.task('watch', function () {
     gulp.watch([
-        './components/**/*.ts', './components/**/*.html', './components/**/*.css'
+        './src/**/*.ts', './src/**/*.html', './src/**/*.css'
     ], ['shaw-components-css', 'shaw-components-webpack']);
 });
 
