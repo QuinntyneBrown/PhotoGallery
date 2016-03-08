@@ -12,6 +12,11 @@ namespace Chloe.Server.Dtos
             this.Slug = entity.Slug;
         }
 
+        public PhotoDto(GalleryPhoto entity)
+        {
+
+        }
+
         public PhotoDto()
         {
 

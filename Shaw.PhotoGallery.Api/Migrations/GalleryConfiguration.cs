@@ -6,6 +6,11 @@ using System;
 
 namespace Chloe.Migrations
 {
+
+//  <meta content = "http:///", property = "og:image" >
+
+//  <meta content="title | SiteName", property="og:title">
+
     public class GalleryConfiguration
     {
         public static void Seed(ChloeContext context)
