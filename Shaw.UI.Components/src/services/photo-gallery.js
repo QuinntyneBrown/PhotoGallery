@@ -1,5 +1,5 @@
 var PhotoGallery = (function () {
-    function PhotoGallery($compile, $q, $rootScope, $routeParams, appendToBodyAsync, extendCssAsync, overlay) {
+    function PhotoGallery($compile, $q, $rootScope, $routeParams, appendToBodyAsync, extendCssAsync, overlay, store) {
         var _this = this;
         this.$compile = $compile;
         this.$q = $q;
@@ -8,10 +8,14 @@ var PhotoGallery = (function () {
         this.appendToBodyAsync = appendToBodyAsync;
         this.extendCssAsync = extendCssAsync;
         this.overlay = overlay;
+        this.store = store;
         this.onRouteChangeSuccess = function () {
             if (_this.$routeParams.gallerySlug) {
                 _this.openAsync();
             }
+        };
+        this.storeOnChange = function (state) {
+            alert("state change");
         };
         this.openAsync = function () {
             var openAsyncFn = function () {
@@ -32,15 +36,16 @@ var PhotoGallery = (function () {
                     nativeHTMLElement: _this.nativeElement,
                     cssObject: {
                         "opacity": "0",
-                        "position": "fixed",
-                        "margin-top": "-300px",
+                        "margin": "0px",
+                        "position": "absolute",
                         "top": "0",
                         "left": "0",
                         "background-color": "#FFF",
                         "display": "block",
                         "z-index": "999",
                         "width": "100%",
-                        "padding": "30px",
+                        "height": "100%",
+                        "padding": "0px",
                         "transition": "all 0.5s",
                         "-webkit-transition": "all 0.5s",
                         "-o-transition": "all 0.5s"
@@ -63,18 +68,17 @@ var PhotoGallery = (function () {
         this.showAsync = function () { return _this.extendCssAsync({
             nativeHTMLElement: _this.nativeElement,
             cssObject: {
-                "opacity": "100",
-                "margin-top": "0px",
+                "opacity": ".25",
             }
         }); };
         this.isOpen = false;
+        store.subscribe(this.storeOnChange);
     }
     Object.defineProperty(PhotoGallery.prototype, "html", {
-        get: function () { return "<photo-gallery></photo-gallery>"; },
+        get: function () { return "<gallery></gallery>"; },
         enumerable: true,
         configurable: true
     });
     return PhotoGallery;
 })();
 exports.PhotoGallery = PhotoGallery;
-//# sourceMappingURL=photo-gallery.js.map

@@ -17,4 +17,3 @@ app.value("removeElement", utilities.removeElement);
 app.value("setOpacityAsync", utilities.setOpacityAsync);
 //app.service("breakPointManager", [services.BreakPointManager])
 //    .config(["breakPointManager", breakPointManager => { }]); 
-//# sourceMappingURL=bootstrap.utilities.js.map

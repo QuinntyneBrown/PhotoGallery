@@ -33,4 +33,3 @@ var fetch = (function () {
     return fetch;
 })();
 exports.fetch = fetch;
-//# sourceMappingURL=fetch.js.map

@@ -5,4 +5,3 @@ exports.appendToBodyAsync = function (options) {
     setTimeout(function () { deferred.resolve(); }, options.wait || 100);
     return deferred.promise;
 };
-//# sourceMappingURL=append-to-body-async.js.map

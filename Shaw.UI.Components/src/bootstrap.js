@@ -17,6 +17,7 @@ var app = angular.module("shaw.components.library", [
     "shaw.utilities",
     "shaw.store"
 ]);
+require("../dist/appTemplates.js");
 app.config(["$routeProvider", function ($routeProvider) {
         $routeProvider.when("/", { template: "<div class='placeholder'></div>" });
         $routeProvider.when("/:gallerySlug", { template: "<div class='placeholder'></div>" });
@@ -25,4 +26,3 @@ app.config(["$routeProvider", function ($routeProvider) {
 app.run(["$rootScope", "photoGallery", function ($rootScope, photoGallery) {
         $rootScope.$on("$routeChangeSuccess", function () { photoGallery.onRouteChangeSuccess(); });
     }]);
-//# sourceMappingURL=bootstrap.js.map

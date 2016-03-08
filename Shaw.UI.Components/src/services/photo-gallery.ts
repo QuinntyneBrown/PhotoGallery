@@ -1,4 +1,5 @@
 ﻿import { Overlay } from "./overlay";
+import * as utilities from "../utilities";
 
 export class PhotoGallery {
     constructor(private $compile: angular.ICompileService,
@@ -7,16 +8,23 @@ export class PhotoGallery {
         private $routeParams: angular.route.IRouteParamsService,
         private appendToBodyAsync:any,
         private extendCssAsync:any,
-        private overlay: Overlay) { }
+        private overlay: Overlay,
+        private store: utilities.Store<any>
+    ) {
+
+        store.subscribe(this.storeOnChange);
+    }
 
     onRouteChangeSuccess = () => {
-
         if ((this.$routeParams as any).gallerySlug) {
-
             this.openAsync();
         }
-
     };
+
+    storeOnChange = state => {
+        alert("state change");
+    }
+
     openAsync = () => {
         var openAsyncFn = () => {
             return this.initializeAsync()
@@ -39,15 +47,16 @@ export class PhotoGallery {
                 nativeHTMLElement: this.nativeElement,
                 cssObject: {
                     "opacity": "0",
-                    "position": "fixed",
-                    "margin-top": "-300px",
+                    "margin": "0px",
+                    "position": "absolute",
                     "top": "0",
-                    "left": "0",
+                    "left":"0",
                     "background-color": "#FFF",
                     "display": "block",
                     "z-index": "999",
                     "width": "100%",
-                    "padding": "30px",
+                    "height": "100%",
+                    "padding": "0px",
                     "transition": "all 0.5s",
                     "-webkit-transition": "all 0.5s",
                     "-o-transition": "all 0.5s"
@@ -75,12 +84,11 @@ export class PhotoGallery {
     showAsync = () => this.extendCssAsync({
         nativeHTMLElement: this.nativeElement,
         cssObject: {
-            "opacity": "100",
-            "margin-top": "0px",
+            "opacity": ".25",
         }
     });
 
-    get html() { return "<photo-gallery></photo-gallery>"; }
+    get html() { return "<gallery></gallery>"; }
     $scope;
     augmentedJQuery;
     nativeElement;

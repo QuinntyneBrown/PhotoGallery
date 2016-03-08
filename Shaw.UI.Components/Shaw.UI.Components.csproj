@@ -71,6 +71,7 @@
     <Content Include="demos\photo-gallery\images\Loveland-1.jpg" />
     <Content Include="demos\photo-gallery\images\Loveland-2.jpg" />
     <Content Include="demos\photo-gallery\images\Loveland-4.jpg" />
+    <Content Include="dist\appTemplates.js" />
     <Content Include="dist\shaw-components.css" />
     <Content Include="dist\shaw-components.js" />
     <Content Include="libs\angular-route.min.js" />
@@ -78,10 +79,13 @@
     <Content Include="libs\jquery.min.js" />
     <Content Include="libs\rx.all.compat.min.js" />
     <Content Include="node_modules\rx\dist\rx.all.compat.min.js" />
-    <Content Include="src\components\photo-gallery.component.html">
-      <DependentUpon>photo-gallery.component.ts</DependentUpon>
-    </Content>
     <Content Include="demos\photo-gallery\index.html" />
+    <Content Include="src\components\gallery.component.css">
+      <DependentUpon>gallery.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\components\gallery.component.html">
+      <DependentUpon>gallery.component.ts</DependentUpon>
+    </Content>
     <Content Include="tsconfig.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -91,9 +95,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\components\photo-gallery-component.css">
-      <DependentUpon>photo-gallery.component.ts</DependentUpon>
-    </Content>
     <Content Include="gulpfile.config.js" />
     <Content Include="gulpfile.js" />
     <Content Include="Web.config" />
@@ -103,16 +104,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <TypeScriptCompile Include="src\actions\gallery-actions.ts" />
+    <TypeScriptCompile Include="src\bootstrap.actions.ts" />
     <TypeScriptCompile Include="src\bootstrap.store.ts" />
     <TypeScriptCompile Include="demos\photo-gallery\photo-gallery.ts" />
     <TypeScriptCompile Include="src\bootstrap.components.ts" />
     <TypeScriptCompile Include="src\bootstrap.services.ts" />
     <TypeScriptCompile Include="src\bootstrap.ts" />
     <TypeScriptCompile Include="src\bootstrap.utilities.ts" />
+    <TypeScriptCompile Include="src\reducers\gallery-reducers.ts" />
     <TypeScriptCompile Include="src\services\gallery-service.ts" />
     <TypeScriptCompile Include="src\services\index.ts" />
     <TypeScriptCompile Include="src\services\overlay.ts" />
-    <TypeScriptCompile Include="src\components\photo-gallery.component.ts" />
+    <TypeScriptCompile Include="src\components\gallery.component.ts" />
     <TypeScriptCompile Include="src\services\photo-gallery.ts" />
     <TypeScriptCompile Include="src\utilities\%24q.ts" />
     <TypeScriptCompile Include="src\utilities\append-to-body-async.ts" />

@@ -25,6 +25,8 @@ var app: any = angular.module("shaw.components.library", [
     "shaw.store"
 ]);
 
+require("../dist/appTemplates.js");
+
 app.config(["$routeProvider", $routeProvider => {
     $routeProvider.when("/", { template: "<div class='placeholder'></div>" });
     $routeProvider.when("/:gallerySlug", { template: "<div class='placeholder'></div>" });

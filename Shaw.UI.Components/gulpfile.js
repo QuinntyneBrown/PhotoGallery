@@ -45,10 +45,21 @@ gulp.task("shaw-components-webpack", function () {
     .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('template-cache', function () {
+    return gulp.src('src/**/*.html')
+        .pipe(templateCache({
+            root: 'src/',
+            module: "shaw.components.library"
+        }))
+        .pipe(concat('appTemplates.js'))
+        .pipe(gulp.dest('./dist/'));
+});
+
+
 gulp.task('watch', function () {
     gulp.watch([
         './src/**/*.ts', './src/**/*.html', './src/**/*.css'
-    ], ['shaw-components-css', 'shaw-components-webpack']);
+    ], ['template-cache', 'shaw-components-css', 'shaw-components-webpack']);
 });
 
-gulp.task('default', ['shaw-components-css', 'shaw-components-webpack', 'watch']);
+gulp.task('default', ['shaw-components-css', 'shaw-components-webpack', 'template-cache', 'watch']);

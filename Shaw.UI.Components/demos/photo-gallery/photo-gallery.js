@@ -12,4 +12,3 @@ AppComponent.config = {
     component: AppComponent
 };
 app.component(AppComponent);
-//# sourceMappingURL=photo-gallery.js.map

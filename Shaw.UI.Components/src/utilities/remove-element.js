@@ -6,4 +6,3 @@ exports.removeElement = function (options) {
         delete options.nativeHTMLElement;
     }
 };
-//# sourceMappingURL=remove-element.js.map
