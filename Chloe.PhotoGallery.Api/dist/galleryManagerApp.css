@@ -1,7 +1,21 @@
+body {
+}
+
+.author-list {
+
+
+}
 .galleryEditor {
 
 }
 
+
+
+.photoUpload-dropZone {
+    background-color:azure;
+    height:500px;
+    width:500px;
+}
 
 .appHeader {
     height:50px;
@@ -17,20 +31,6 @@
 body {
 }
 
-body {
-}
-
-.author-list {
-
-
-}
-
-
-.photoUpload-dropZone {
-    background-color:azure;
-    height:500px;
-    width:500px;
-}
 .button {
     margin-top:15px;
     margin-bottom:30px;
@@ -39,6 +39,14 @@ body {
     background-color:#FFF;
     border: solid 1px;
     cursor:pointer;
+}
+.inputField {
+    padding-right:15px;
+    padding-left:15px;
+    line-height:2em;
+    height:30px;
+    min-width:200px;
+    margin-bottom:15px;
 }
 
 .tab-title {

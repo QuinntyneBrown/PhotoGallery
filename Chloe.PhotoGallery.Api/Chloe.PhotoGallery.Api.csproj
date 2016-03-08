@@ -248,6 +248,7 @@
     <Content Include="wwwroot\components\shared\button.html">
       <DependentUpon>button.ts</DependentUpon>
     </Content>
+    <Content Include="wwwroot\components\shared\input-field.css" />
     <Content Include="wwwroot\components\shared\tab-content.css">
       <DependentUpon>tab-content.ts</DependentUpon>
     </Content>
