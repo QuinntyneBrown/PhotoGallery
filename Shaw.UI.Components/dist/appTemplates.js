@@ -1,1 +1,0 @@
-angular.module("shaw.components.library").run(["$templateCache", function($templateCache) {$templateCache.put("src/components/gallery.component.html","<div>\r\n    <h1>Photo Gallery</h1>\r\n</div>");}]);
