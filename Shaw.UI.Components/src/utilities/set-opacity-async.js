@@ -11,3 +11,4 @@ exports.setOpacityAsync = function (options) {
     }
     return deferred.promise;
 };
+//# sourceMappingURL=set-opacity-async.js.map

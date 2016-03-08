@@ -11,6 +11,12 @@ var component_decorators_1 = require("../utilities/component-decorators");
 var GalleryComponent = (function () {
     function GalleryComponent($element) {
         this.$element = $element;
+        this.storeOnStateChange = function (state) {
+        };
+        this.next = function () {
+        };
+        this.previous = function () {
+        };
     }
     GalleryComponent = __decorate([
         component_decorators_1.Component({
@@ -23,3 +29,4 @@ var GalleryComponent = (function () {
     return GalleryComponent;
 })();
 exports.GalleryComponent = GalleryComponent;
+//# sourceMappingURL=gallery.component.js.map

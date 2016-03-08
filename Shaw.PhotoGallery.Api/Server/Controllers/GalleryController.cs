@@ -25,6 +25,11 @@ namespace Chloe.Server.Controllers
         [HttpGet]
         public IHttpActionResult Get(GalleryAddOrUpdateRequestDto dto) { return Ok(this.service.GetAll()); }
 
+        [AllowAnonymous]
+        [Route("getBySlug")]
+        [HttpGet]
+        public IHttpActionResult GetBySlug(string slug) { return Ok(this.service.GetBySlug(slug)); }
+        
         [Route("remove")]
         [HttpDelete]
         public IHttpActionResult Remove(int id) { return Ok(this.service.Remove(id)); }

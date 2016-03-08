@@ -51,6 +51,17 @@ namespace Chloe.Server.Services
             return id;
         }
 
+        public GalleryDto GetBySlug(string slug)
+        {
+            var gallery = uow.Galleries.GetAll()
+                .Where(x => x.Slug == slug)
+                .Include(x => x.Sponsor)
+                .Include(x => x.Photos)
+                .Include("Photos.Photo")
+                .Single();                    
+            return new GalleryDto(gallery);
+        }
+
         protected readonly IChloeUow uow;
     }
 }

@@ -14,6 +14,8 @@ namespace Chloe.Migrations
 
         protected override void Seed(Chloe.Server.Data.ChloeContext context)
         {
+            PhotoConfiguration.Seed(context);
+            GalleryConfiguration.Seed(context);
             UserConfiguration.Seed(context);
         }
     }

@@ -26,3 +26,4 @@ app.config(["$routeProvider", function ($routeProvider) {
 app.run(["$rootScope", "photoGallery", function ($rootScope, photoGallery) {
         $rootScope.$on("$routeChangeSuccess", function () { photoGallery.onRouteChangeSuccess(); });
     }]);
+//# sourceMappingURL=bootstrap.js.map

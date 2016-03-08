@@ -52,3 +52,4 @@ var LocalStorageManagerProvider = (function () {
     return LocalStorageManagerProvider;
 })();
 exports.LocalStorageManagerProvider = LocalStorageManagerProvider;
+//# sourceMappingURL=local-storage-manager-provider.js.map

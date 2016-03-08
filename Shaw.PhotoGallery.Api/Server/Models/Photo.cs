@@ -12,6 +12,7 @@ namespace Chloe.Server.Models
         
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
-        public long Size { get; set; }        
+        public string Slug { get; set; }
+        public long? Size { get; set; }        
     }
 }

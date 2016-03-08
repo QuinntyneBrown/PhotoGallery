@@ -82,3 +82,4 @@ var PhotoGallery = (function () {
     return PhotoGallery;
 })();
 exports.PhotoGallery = PhotoGallery;
+//# sourceMappingURL=photo-gallery.js.map

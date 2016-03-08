@@ -7,6 +7,7 @@ namespace Chloe.Server.Services.Contracts
     {
         GalleryAddOrUpdateResponseDto AddOrUpdate(GalleryAddOrUpdateRequestDto request);
         ICollection<GalleryDto> GetAll();
+        GalleryDto GetBySlug(string slug);
         dynamic Remove(int id);
     }
 }

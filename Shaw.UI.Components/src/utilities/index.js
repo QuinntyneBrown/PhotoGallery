@@ -8,3 +8,4 @@ __export(require("./set-opacity-async"));
 __export(require("./extend-css-async"));
 __export(require("./fetch"));
 __export(require("./remove-element"));
+//# sourceMappingURL=index.js.map

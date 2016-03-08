@@ -28,3 +28,4 @@ var PreviousPhotoAction = (function () {
     return PreviousPhotoAction;
 })();
 exports.PreviousPhotoAction = PreviousPhotoAction;
+//# sourceMappingURL=gallery-actions.js.map

@@ -65,12 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="demos\photo-gallery\images\1-tree-stump-coffee-table1.jpg" />
-    <Content Include="demos\photo-gallery\images\13-tree-stump-planters1.jpg" />
-    <Content Include="demos\photo-gallery\images\14-tree-stump-wine-rack1.jpg" />
-    <Content Include="demos\photo-gallery\images\Loveland-1.jpg" />
-    <Content Include="demos\photo-gallery\images\Loveland-2.jpg" />
-    <Content Include="demos\photo-gallery\images\Loveland-4.jpg" />
+    <Content Include="demos\photo-gallery\images\tree-stump-coffee-table.jpg" />
+    <Content Include="demos\photo-gallery\images\tree-stump-planters.jpg" />
+    <Content Include="demos\photo-gallery\images\tree-stump-wine-rack.jpg" />
+    <Content Include="demos\photo-gallery\images\loveland-one.jpg" />
+    <Content Include="demos\photo-gallery\images\loveland-two.jpg" />
+    <Content Include="demos\photo-gallery\images\loveland-three.jpg" />
     <Content Include="dist\appTemplates.js" />
     <Content Include="dist\shaw-components.css" />
     <Content Include="dist\shaw-components.js" />

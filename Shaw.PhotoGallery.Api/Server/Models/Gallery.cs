@@ -19,6 +19,7 @@ namespace Chloe.Server.Models
         public string Description { get; set; }
         [ForeignKey("Sponsor")]
         public int? SponsorId { get; set; }
+        public string Slug { get; set; }
         public Sponsor Sponsor { get; set; }
         public ICollection<GalleryTag> Tags { get; set; }
         public ICollection<GalleryPhoto> Photos { get; set; }

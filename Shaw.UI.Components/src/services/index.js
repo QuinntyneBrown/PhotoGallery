@@ -4,3 +4,4 @@ function __export(m) {
 __export(require("./overlay"));
 __export(require("./photo-gallery"));
 __export(require("./gallery-service"));
+//# sourceMappingURL=index.js.map

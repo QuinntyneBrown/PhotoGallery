@@ -19,3 +19,4 @@ app.service("photoGallery", [
     "overlay",
     "store",
     services.PhotoGallery]);
+//# sourceMappingURL=bootstrap.services.js.map

@@ -1,9 +1,6 @@
 ﻿using Chloe.Server.Data;
 using Chloe.Server.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Data.Entity.Migrations;
 
 namespace Chloe.Migrations

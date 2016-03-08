@@ -8,3 +8,4 @@ angular.module("shaw.store", [])
     .provider("initialState", utilities.InitialStateProvider)
     .value("guid", utilities.guid)
     .run(["store", function (store) { }]);
+//# sourceMappingURL=bootstrap.store.js.map

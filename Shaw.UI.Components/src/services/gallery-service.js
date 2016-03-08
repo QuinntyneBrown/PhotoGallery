@@ -19,3 +19,4 @@ var GalleryService = (function () {
     return GalleryService;
 })();
 exports.GalleryService = GalleryService;
+//# sourceMappingURL=gallery-service.js.map

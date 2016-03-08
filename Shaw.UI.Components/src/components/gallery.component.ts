@@ -8,7 +8,17 @@
 export class GalleryComponent {
     constructor(private $element: angular.IAugmentedJQuery) { }
 
+    storeOnStateChange = state => {
 
+    }
+
+    next = () => {
+
+    }
+    
+    previous = () => {
+
+    } 
     //no previous
 
     //if you click next you are on the last slide, display the invite to go to
