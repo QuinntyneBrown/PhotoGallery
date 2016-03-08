@@ -65,12 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="demos\photo-gallery\images\tree-stump-coffee-table.jpg" />
-    <Content Include="demos\photo-gallery\images\tree-stump-planters.jpg" />
-    <Content Include="demos\photo-gallery\images\tree-stump-wine-rack.jpg" />
-    <Content Include="demos\photo-gallery\images\loveland-one.jpg" />
-    <Content Include="demos\photo-gallery\images\loveland-two.jpg" />
-    <Content Include="demos\photo-gallery\images\loveland-three.jpg" />
     <Content Include="demos\photo-gallery\love-land-detail.html" />
     <Content Include="demos\photo-gallery\timber-detail.html" />
     <Content Include="dist\appTemplates.js" />
@@ -104,7 +98,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="demos\photo-gallery\images\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\actions\gallery-actions.ts" />
     <TypeScriptCompile Include="src\bootstrap.actions.ts" />
