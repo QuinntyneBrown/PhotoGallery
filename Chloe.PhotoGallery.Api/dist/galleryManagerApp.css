@@ -9,12 +9,17 @@ body {
 
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    margin:0;
+    padding:0;
+}
 
-
-.photoUpload-dropZone {
-    background-color:azure;
-    height:500px;
-    width:500px;
+.mainContent {
+    min-height:600px;
+    padding-right:30px;
+    padding-left:30px;
 }
 
 .appHeader {
@@ -31,6 +36,13 @@ body {
 body {
 }
 
+
+
+.photoUpload-dropZone {
+    background-color:azure;
+    height:500px;
+    width:500px;
+}
 .button {
     margin-top:15px;
     margin-bottom:30px;
