@@ -8,27 +8,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var component_decorators_1 = require("../utilities/component-decorators");
-var gallery_actions_1 = require("../actions/gallery-actions");
-var GalleryComponent = (function () {
-    function GalleryComponent($element, galleryActionCreator) {
-        this.$element = $element;
-        this.galleryActionCreator = galleryActionCreator;
-        this.storeOnStateChange = function (state) {
-        };
-        this.next = function () {
-        };
-        this.previous = function () {
+var FooterComponent = (function () {
+    function FooterComponent() {
+        this.storeOnChange = function (state) {
         };
     }
-    GalleryComponent = __decorate([
+    FooterComponent = __decorate([
         component_decorators_1.Component({
-            selector: "gallery",
-            templateUrl: "src/components/gallery.component.html",
-            providers: ["$element", "galleryActionCreator"]
+            selector: "chloe-footer",
+            componentName: "chloeFooterComponent",
+            templateUrl: "src/components/footer.component.html"
         }), 
-        __metadata('design:paramtypes', [Object, gallery_actions_1.GalleryActionCreator])
-    ], GalleryComponent);
-    return GalleryComponent;
+        __metadata('design:paramtypes', [])
+    ], FooterComponent);
+    return FooterComponent;
 })();
-exports.GalleryComponent = GalleryComponent;
-//# sourceMappingURL=gallery.component.js.map
+exports.FooterComponent = FooterComponent;

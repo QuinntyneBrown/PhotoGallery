@@ -17,17 +17,7 @@ import { GalleryActionCreator } from "../../actions";
 export class GalleryEditorComponent {
     constructor(private $location, private galleryActionCreator, private invokeAsync) { }
 
-    storeOnChange = state => {
-        //this.id = null;
-        //this.title = null;
-        //this.name = null;
-        //this.sponsor = null;
-        //this.sponsorId = null;
-        //this.photos = [];
-        //this.metaData = [];
-        //this.tags = [];
-        //this.openGraphData = [];
-    }
+    storeOnChange = state => { }
 
     addOrUpdate = () => {
         this.invokeAsync({
@@ -54,6 +44,10 @@ export class GalleryEditorComponent {
         });
     } 
     
+    create = () => {
+        this.galleryActionCreator.create();
+    }
+
     remove = () => this.galleryActionCreator.remove({ id: this.id });
          
     id;

@@ -7,4 +7,16 @@
     text-transform: uppercase;
 }
 
-.appHeader a.selected { font-weight:800; background-color:#F36C81; color:#EEE; }
+.appHeader a:link,
+.appHeader a:hover,
+.appHeader a:visited
+ {
+    text-decoration:none;
+    color:#333;
+}
+
+.appHeader a.selected { 
+    font-weight:800; 
+    background-color:#F36C81; 
+    color:#EEE; 
+}

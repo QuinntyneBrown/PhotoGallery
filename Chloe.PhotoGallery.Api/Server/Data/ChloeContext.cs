@@ -16,6 +16,7 @@ namespace Chloe.Server.Data
         }
 
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Customer> Customer { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<Gallery> Galleries { get; set; }
         public DbSet<Tag> Tags { get; set; }

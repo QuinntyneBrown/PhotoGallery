@@ -28,6 +28,7 @@ namespace Chloe.Server.Data
         }
         
         public IRepository<Brand> Brands { get { return GetStandardRepo<Brand>(); } }
+        public IRepository<Customer> Customers { get { return GetStandardRepo<Customer>(); } }
         public IRepository<Photo> Photos { get { return GetStandardRepo<Photo>(); } }
         public IRepository<User> Users { get { return GetStandardRepo<User>(); } }
         public IRepository<Role> Roles { get { return GetStandardRepo<Role>(); } }

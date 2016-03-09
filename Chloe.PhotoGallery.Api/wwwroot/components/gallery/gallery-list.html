@@ -5,9 +5,13 @@
     <h1>Gallery List</h1>
 
     <div data-ng-repeat="gallery in vm.entities">
-        <h1>{{ ::gallery.name }} - {{ ::gallery.galleryPhotosCount }}</h1>
-        <div><a data-ng-click="vm.edit(gallery)">edit</a></div>
-        <div><a data-ng-click="vm.remove(gallery)">delete</a></div>        
+        <div class="galleryList-name">
+            {{ gallery.name }}
+        </div>
+        <div class="galleryList-actions">
+            <span data-ng-click="vm.edit(gallery)">edit</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span data-ng-click="vm.remove(gallery)">delete</span>
+        </div>        
+        <div style="clear:both;"></div>
     </div>
     
 </div>

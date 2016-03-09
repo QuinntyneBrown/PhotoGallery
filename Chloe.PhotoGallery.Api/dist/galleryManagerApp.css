@@ -8,6 +8,20 @@ body {
 .galleryEditor {
 
 }
+.galleryList-name {
+    width:200px;
+}
+
+.galleryList-name,
+.galleryList-actions {
+    position:relative;
+    float:left;
+}
+
+.galleryList-name span,
+.galleryList-actions span {
+    cursor:pointer;
+}
 
 body {
     font-family: 'Lato', sans-serif;
@@ -31,7 +45,19 @@ body {
     text-transform: uppercase;
 }
 
-.appHeader a.selected { font-weight:800; background-color:#F36C81; color:#EEE; }
+.appHeader a:link,
+.appHeader a:hover,
+.appHeader a:visited
+ {
+    text-decoration:none;
+    color:#333;
+}
+
+.appHeader a.selected { 
+    font-weight:800; 
+    background-color:#F36C81; 
+    color:#EEE; 
+}
 
 body {
 }
@@ -64,12 +90,14 @@ body {
 .tab-title {
     display:inline-block;
     font-weight:100;
-    width:200px;
+    padding-right:15px;
+    padding-left:15px;
     height:75px;
     text-align:center;
-    text-transform:uppercase;    
+    text-transform:uppercase;   
+    font-size:1em; 
+    cursor:pointer;
 }
-
 
 .tab-title.tabs-titleselected {
     font-weight:800;

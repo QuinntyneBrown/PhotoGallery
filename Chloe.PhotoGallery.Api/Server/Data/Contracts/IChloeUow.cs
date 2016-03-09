@@ -6,6 +6,7 @@ namespace Chloe.Server.Data.Contracts
     {
         IRepository<Author> Authors { get; }
         IRepository<Brand> Brands { get; }
+        IRepository<Customer> Customers { get; }
         IRepository<Photo> Photos { get; }
         IRepository<User> Users { get; }
         IRepository<Gallery> Galleries { get; }

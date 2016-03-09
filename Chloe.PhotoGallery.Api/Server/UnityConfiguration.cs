@@ -28,6 +28,7 @@ namespace Chloe.Server
             container.RegisterType<IMetaDataService, MetaDataService>();
             container.RegisterType<IOpenGraphService, OpenGraphService>();
             container.RegisterType<ISponsorService, SponsorService>();
+            container.RegisterType<ICustomerService, CustomerService>();
             return container;
         }
     }

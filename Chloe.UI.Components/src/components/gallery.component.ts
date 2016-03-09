@@ -1,7 +1,6 @@
 ﻿import { Component } from "../utilities/component-decorators";
 import { GalleryActionCreator } from "../actions/gallery-actions";
 
-alert("wtf");
 
 @Component({
     selector: "gallery",
@@ -10,8 +9,7 @@ alert("wtf");
 })
 export class GalleryComponent {
     constructor(private $element: angular.IAugmentedJQuery, private galleryActionCreator: GalleryActionCreator) {
-
-        alert("wtf?");
+        
     }
 
     storeOnStateChange = state => {

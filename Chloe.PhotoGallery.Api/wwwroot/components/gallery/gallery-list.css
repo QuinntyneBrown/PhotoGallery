@@ -1,1 +1,14 @@
-﻿
+﻿.galleryList-name {
+    width:200px;
+}
+
+.galleryList-name,
+.galleryList-actions {
+    position:relative;
+    float:left;
+}
+
+.galleryList-name span,
+.galleryList-actions span {
+    cursor:pointer;
+}

@@ -185,6 +185,12 @@
     <Content Include="wwwroot\components\brand\brand-list.html">
       <DependentUpon>brand-list.ts</DependentUpon>
     </Content>
+    <Content Include="wwwroot\components\customer\customer-editor.html">
+      <DependentUpon>customer-editor.component.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\customer\customer-list.html">
+      <DependentUpon>customer-list.component.ts</DependentUpon>
+    </Content>
     <Content Include="wwwroot\components\gallery\gallery-editor.css">
       <DependentUpon>gallery-editor.ts</DependentUpon>
     </Content>
@@ -319,6 +325,7 @@
     <Compile Include="Server\Config\Contracts\IConfigurationProvider.cs" />
     <Compile Include="Server\Controllers\AuthorController.cs" />
     <Compile Include="Server\Controllers\BrandController.cs" />
+    <Compile Include="Server\Controllers\CustomerController.cs" />
     <Compile Include="Server\Controllers\GalleryController.cs" />
     <Compile Include="Server\Controllers\MetaDataItemController.cs" />
     <Compile Include="Server\Controllers\OpenGraphDataItemController.cs" />
@@ -368,6 +375,9 @@
     <Compile Include="Server\Models\BaseEntity.cs" />
     <Compile Include="Server\Models\Brand.cs" />
     <Compile Include="Server\Models\BrandGallery.cs" />
+    <Compile Include="Server\Models\ContactInfo.cs" />
+    <Compile Include="Server\Models\ContactInfoType.cs" />
+    <Compile Include="Server\Models\Customer.cs" />
     <Compile Include="Server\Models\Description.cs" />
     <Compile Include="Server\Models\Gallery.cs" />
     <Compile Include="Server\Models\GalleryAuthor.cs" />
@@ -381,6 +391,8 @@
     <Compile Include="Server\Models\GalleryTag.cs" />
     <Compile Include="Server\Models\MetaDataItem.cs" />
     <Compile Include="Server\Models\OpenGraphDataItem.cs" />
+    <Compile Include="Server\Models\Person.cs" />
+    <Compile Include="Server\Models\PhoneNumber.cs" />
     <Compile Include="Server\Models\Photo.cs" />
     <Compile Include="Server\Models\PhotoDescription.cs" />
     <Compile Include="Server\Models\PhotoTag.cs" />
@@ -397,6 +409,7 @@
     <Compile Include="Server\Services\Contracts\IBrandService.cs" />
     <Compile Include="Server\Services\Contracts\ICache.cs" />
     <Compile Include="Server\Services\Contracts\ICacheProvider.cs" />
+    <Compile Include="Server\Services\Contracts\ICustomerService.cs" />
     <Compile Include="Server\Services\Contracts\IDescriptionService.cs" />
     <Compile Include="Server\Services\Contracts\IEncryptionService.cs" />
     <Compile Include="Server\Services\Contracts\IGalleryService.cs" />
@@ -408,6 +421,7 @@
     <Compile Include="Server\Services\Contracts\ITagService.cs" />
     <Compile Include="Server\Services\Contracts\IUserService.cs" />
     <Compile Include="Server\Services\Contracts\MemoryCache.cs" />
+    <Compile Include="Server\Services\CustomerService.cs" />
     <Compile Include="Server\Services\DescriptionService.cs" />
     <Compile Include="Server\Services\EncryptionService.cs" />
     <Compile Include="Server\Services\GalleryService.cs" />
@@ -467,6 +481,8 @@
     <TypeScriptCompile Include="wwwroot\components\author\author-list.ts" />
     <TypeScriptCompile Include="wwwroot\components\brand\brand-editor.ts" />
     <TypeScriptCompile Include="wwwroot\components\brand\brand-list.ts" />
+    <TypeScriptCompile Include="wwwroot\components\customer\customer-editor.component.ts" />
+    <TypeScriptCompile Include="wwwroot\components\customer\customer-list.component.ts" />
     <TypeScriptCompile Include="wwwroot\components\description\description-editor.ts" />
     <TypeScriptCompile Include="wwwroot\components\description\description-list.ts" />
     <TypeScriptCompile Include="wwwroot\components\gallery\gallery-editor.ts" />

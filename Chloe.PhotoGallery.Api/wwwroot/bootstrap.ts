@@ -55,6 +55,7 @@ app.config(["$routeProvider", "apiEndpointProvider", "initialStateProvider", "lo
         .when("/author/list", { template: "<author-list></author-list>" })
         .when("/brand/list", { template: "<brand-list></brand-list>" })
         .when("/description/list", { template: "<description-list></description-list>" })
+        .when("/gallery/edit/:id", { template: "<gallery-list></gallery-list>" })
         .when("/gallery/list", { template: "<gallery-list></gallery-list>" })
         .when("/photo/list", { template: "<photo-list></photo-list>" })
         .when("/photo/upload/:galleryId", { template: "<photo-upload></photo-upload>" })
