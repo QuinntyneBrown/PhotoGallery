@@ -270,6 +270,12 @@
     <Content Include="wwwroot\components\shared\tabs.html">
       <DependentUpon>tabs.ts</DependentUpon>
     </Content>
+    <Content Include="wwwroot\components\sponsor\sponsor-editor.html">
+      <DependentUpon>sponsor-editor.ts</DependentUpon>
+    </Content>
+    <Content Include="wwwroot\components\sponsor\sponsor-list.html">
+      <DependentUpon>sponsor-list.ts</DependentUpon>
+    </Content>
     <Content Include="wwwroot\components\tag\tag-editor.html">
       <DependentUpon>tag-editor.ts</DependentUpon>
     </Content>
